@@ -1,2 +1,2 @@
-public
-======
+Usersnap Public repository
+==========================
