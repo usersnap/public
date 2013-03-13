@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Usersnap</name>
+	<author>Usersnap.com</author>
+	<creationDate>October 2011</creationDate>
+	<copyright>Copyright (C) 2011 usersnap.com</copyright>
+	<license>http://usersnap.com/license</license>
+	<authorEmail>office@usersnap.com</authorEmail>
+	<authorUrl>www.usersnap.com</authorUrl>
+	<version>0.6</version>
+	<description>With usersnap your visitors can create visual feedback.</description>
+	
+	<files>
+		<filename plugin="usersnap">usersnap.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="api-key"
+					type="text" 
+					label="Api-Key" 
+					size="32"
+					description="Specify you api key."
+				/>
+
+				<field name="button-valign" 
+					type="list" 
+					default="bottom" 
+					label="Button vertical-alignment" 
+					description="">
+					<option value="top">top</option>
+					<option value="middle">middle</option>
+					<option value="bottom">bottom</option>
+				</field>
+				<field name="button-halign" 
+					type="list" 
+					default="right" 	
+					label="Button horizontal-alignment" 
+					description="">
+					<option value="left">left</option>
+					<option value="right">right</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	
+</install>
