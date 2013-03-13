@@ -1,8 +1,0 @@
-name = Usersnap
-description = Integrates Usersnap
-version = 7.x-dev
-core = 7.x
-package = usersnap
-
-files[] = usersnap.module
-files[] = usersnap.install
