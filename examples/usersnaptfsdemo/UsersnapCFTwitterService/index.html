@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Usersnap Continuous Feedback</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+        .usersnaplogo {
+            float:left;
+            margin-top: 7px;
+        }
+        .tfslogo {
+            float:left;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+         .tweet {
+            border: 1px solid #DDDDDD;
+        }
+
+        .tweet.hide {
+            display: none;
+        }
+
+        .tweet .time {
+            float: right;
+            padding-right: 5px;
+        }
+
+        .tweet .content {
+            margin: 22px 10px 10px;
+        }
+
+        .tweet .content span {
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/usersnaptwitter.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <!--<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>-->
+            <img src="img/usersnaptfs.png" border="0" class="usersnaplogo"/>
+            <img src="img/tfs.png" border="0" class="tfslogo"/>
+          <a class="brand" href="#">Usersnap TFS Integration</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="http://usersnap.com" target="_blank">visit usersnap.com!</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h1>Demo of Usersnap's Integration with Team Foundation Service</h1>
+      
+      <div class="row">
+          <div class="span5" style="text-align: center;">
+            <p>Below you see tweets with the famous hashtag #usersnap</p>
+            <button id="tweetit" class="btn btn-success" type="submit">Tweet about #usersnap!</button>
+          </div>
+          <div class="span7"></div>
+      </div>
+       <br />
+      <div class="row">
+        <div class="span5" id="tweetcontainer">
+            <div id="loading">Loading...</div>
+        </div>
+        <div class="span7">
+            <!--<form id="tweetform">
+                <label>Your tweet:</label>
+                <textarea name="tweet" style="width:330px; height: 120px">I've tried the #usersnap #tfs example page at http://usersnaptfsdemo.cloudapp.net via @usersnap</textarea>
+                <span class="help-block">The tweet must contain usersnap to appear at this wall!</span>
+                <button class="btn btn-success" type="submit">tweet it</button>
+            </form>-->
+            <h2>About this Demo</h2>
+            <p>This is a demonstration of Usersnap in combination with Microsoft's Team Foundation Server. Read more <a href="http://visualstudio.com" target="_blank">here</a></p>
+            <h3>WCF service</h3>
+            <p>All tweets containing the hashtag #usersnap are collected in a WCF service. These tweets are subsequently delivered to this page.</p>
+            <h3>TFS Source Control</h3>
+            <p>The source code of this project is stored at visulastudio.com, a hosted Team Foundation Server from Microsoft</p>
+            <h3>Continuous Deployment</h3>
+            <p>The TFS service offers a convenient way for a continous deployment scenario as described here (link to blog post)</p>
+            <h3>Continuous Feedback</h3>
+            <p>Usersnap, a tool which provides continous feedback in form of annotated screenshots has been connected with TFS.</p>
+            <p>Submitted feedback appears in the bug tracker of TFS and contains an annotated screenshot. Click here to try it on this page.</p>
+        </div>
+      </div>
+        <small>&copy; by Usersnap GmbH</small>
+    </div>
+
+    <script type="text/javascript">
+        var _usersnapconfig = {
+            apiKey: '71d1bb3e-88e9-429b-a2c5-f7da2579e0bb',
+            valign: 'bottom',
+            halign: 'right',
+            tools: ["pen", "highlight", "note"],
+            lang: 'en',
+            commentBox: true,
+            emailBox: true
+        };
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//api.usersnap.com/usersnap.js';
+            var x = document.getElementsByTagName('head')[0];
+            x.appendChild(s);
+        })();
+</script>
+
+</body>
+</html>

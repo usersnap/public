@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "UssersnapContinuousFeedback", "UssersnapContinuousFeedback\UssersnapContinuousFeedback.ccproj", "{CCB6CC90-5CDF-49A5-A853-60AAD724A369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersnapCFTwitterService", "UsersnapCFTwitterService\UsersnapCFTwitterService.csproj", "{185D976D-9917-440F-8D48-131D76D7BD9D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://usersnaptest.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UsersnapCFTwitterService\\UsersnapCFTwitterService.csproj
+		SccProjectName1 = UsersnapCFTwitterService
+		SccLocalPath1 = UsersnapCFTwitterService
+		SccProjectUniqueName2 = UssersnapContinuousFeedback\\UssersnapContinuousFeedback.ccproj
+		SccProjectName2 = UssersnapContinuousFeedback
+		SccLocalPath2 = UssersnapContinuousFeedback
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCB6CC90-5CDF-49A5-A853-60AAD724A369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB6CC90-5CDF-49A5-A853-60AAD724A369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB6CC90-5CDF-49A5-A853-60AAD724A369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB6CC90-5CDF-49A5-A853-60AAD724A369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185D976D-9917-440F-8D48-131D76D7BD9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185D976D-9917-440F-8D48-131D76D7BD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185D976D-9917-440F-8D48-131D76D7BD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185D976D-9917-440F-8D48-131D76D7BD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
