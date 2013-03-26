@@ -3,13 +3,13 @@
 Plugin Name: Usersnap
 Plugin URI: http://www.usersnap.com
 Description: Usersnap helps website owners to get feedback in form of screeenshots from their customers, readers or users.
-Version: 1.5
+Version: 1.8
 Author: Usersnap
 Author URI: http://usersnap.com
 License: GPL v2
 */
 
-define('USERSNAP_VERSION', '1.5');
+define('USERSNAP_VERSION', '1.8');
 define('USERSNAP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 if ( is_admin() ){ // admin actions
@@ -48,7 +48,7 @@ function us_add_js() {
 	}
 	if ($options['api-key']!=="") {
 		?>
-		<script type="text/javascript">
+		<script type="text/javascript" data-cfasync="false">
 			var _usersnapconfig = {
 				apiKey: '<?php echo $options['api-key']; ?>',
 				valign: '<?php echo $options['button-valign']; ?>',
@@ -218,6 +218,7 @@ function usersnap_input_tool0() {
 		<option value="blackout" <?php echo ($options['tool0']=="blackout"?"selected":"")?>>Blackout</option>
 		<option value="pen" <?php echo ($options['tool0']=="pen"?"selected":"")?>>Pen</option>
 		<option value="note" <?php echo ($options['tool0']=="note"?"selected":"")?>>Note</option>
+		<option value="arrow" <?php echo ($options['tool0']=="arrow"?"selected":"")?>>Arrow</option>
 	</select><?php
 }
 function usersnap_input_tool1() {
@@ -231,6 +232,7 @@ function usersnap_input_tool1() {
 		<option value="blackout" <?php echo ($options['tool1']=="blackout"?"selected":"")?>>Blackout</option>
 		<option value="pen" <?php echo ($options['tool1']=="pen"?"selected":"")?>>Pen</option>
 		<option value="note" <?php echo ($options['tool1']=="note"?"selected":"")?>>Note</option>
+		<option value="arrow" <?php echo ($options['tool1']=="arrow"?"selected":"")?>>Arrow</option>
 	</select><?php
 }
 function usersnap_input_tool2() {
@@ -244,6 +246,7 @@ function usersnap_input_tool2() {
 		<option value="blackout" <?php echo ($options['tool2']=="blackout"?"selected":"")?>>Blackout</option>
 		<option value="pen" <?php echo ($options['tool2']=="pen"?"selected":"")?>>Pen</option>
 		<option value="note" <?php echo ($options['tool2']=="note"?"selected":"")?>>Note</option>
+		<option value="arrow" <?php echo ($options['tool2']=="arrow"?"selected":"")?>>Arrow</option>
 	</select><?php
 }
 
