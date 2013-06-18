@@ -22,7 +22,6 @@
         s.type = 'text/javascript';
         s.async = true;
         s.src = '//api.usersnap.com/usersnap.js';
-        $(s).load(usLoaded);
         var x = document.getElementsByTagName('head')[0];
         x.appendChild(s);
     };
@@ -73,6 +72,7 @@
 	            }, action);
 	            _usersnapconfig = config;
 	            _usersnapconfig['mode'] = 'report';
+                _usersnapconfig['loadHandler'] = usLoaded;
 	            if (typeof(_usersnapconfig['apiKey']) !== 'string') {
 	                $.error('Please specify at least an valid apiKey');
 	            } else {
