@@ -1,48 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install version="1.5" type="plugin" group="system">
-	<name>System - Usersnap</name>
-	<author>Usersnap.com</author>
-	<creationDate>October 2011</creationDate>
-	<copyright>Copyright (C) 2011 usersnap.com</copyright>
-	<license>http://usersnap.com/license</license>
-	<authorEmail>office@usersnap.com</authorEmail>
-	<authorUrl>www.usersnap.com</authorUrl>
-	<version>0.6</version>
-	<description>With usersnap your visitors can create visual feedback.</description>
-	
-	<files>
-		<filename plugin="usersnap">usersnap.php</filename>
-	</files>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>System - Usersnap</name>
+    <author>Usersnap.com</author>
+    <creationDate>August 2013</creationDate>
+    <copyright>Copyright (C) 2013 usersnap.com</copyright>
+    <license>GNU/GPLv2 http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <authorEmail>contact@usersnap.com</authorEmail>
+    <authorUrl>usersnap.com</authorUrl>
+    <version>1.0.0</version>
+    <releaseDate>2013-08-29</releaseDate>
+    <description>With usersnap your visitors can create visual feedback.</description>
+    
+    <files>
+            <filename plugin="usersnap">usersnap.php</filename>
+            <filename>index.html</filename>
+    </files>
+        
+    <languages>
+            <language tag="en-GB">en-GB.plg_system_usersnap.ini</language>
+    </languages>
+        
+    <config>
+        <fields name="params">
 
-	<config>
-		<fields name="params">
-
-			<fieldset name="basic">
-				<field name="api-key"
-					type="text" 
-					label="Api-Key" 
-					size="32"
-					description="Specify you api key."
-				/>
-
-				<field name="button-valign" 
-					type="list" 
-					default="bottom" 
-					label="Button vertical-alignment" 
-					description="">
-					<option value="top">top</option>
-					<option value="middle">middle</option>
-					<option value="bottom">bottom</option>
-				</field>
-				<field name="button-halign" 
-					type="list" 
-					default="right" 	
-					label="Button horizontal-alignment" 
-					description="">
-					<option value="left">left</option>
-					<option value="right">right</option>
-				</field>
-			</fieldset>
-		</fields>
-	</config>	
-</install>
+            <fieldset name="basic">
+                <field name="api-key"
+                    type="text" 
+                    label="PLG_SYSTEM_USERSNAP_APIKEY" 
+                    size="32"
+                    description="PLG_SYSTEM_USERSNAP_APIKEYDESCR"
+                />
+                <field name="btn-text"
+                    type="text" 
+                    label="PLG_SYSTEM_USERSNAP_BTN_TEXT" 
+                    size="50"
+                    description="PLG_SYSTEM_USERSNAP_BTN_TEXTDESCR"
+                />
+                <field name="shortcut"
+                    type="checkbox" 
+                    value="1"
+                    default="0"
+                    label="PLG_SYSTEM_USERSNAP_SHORTCUT" 
+                    description="PLG_SYSTEM_USERSNAP_SHORTCUTDESCR"
+                />
+                <field name="emailbox"
+                    type="checkbox" 
+                    value="1"
+                    default="0"
+                    label="PLG_SYSTEM_USERSNAP_EMAILBOX" 
+                    description="PLG_SYSTEM_USERSNAP_EMAILBOXDESCR"
+                />
+                <field name="emailboxph"
+                    type="text" 
+                    label="PLG_SYSTEM_USERSNAP_EMAILBOXPH"
+                    size="50"
+                    description="PLG_SYSTEM_USERSNAP_EMAILBOXPHDESCR"
+                />
+                <field name="emailboxvalue"
+                    type="text" 
+                    label="PLG_SYSTEM_USERSNAP_EMAILBOXVALUE"
+                    size="50"
+                    description="PLG_SYSTEM_USERSNAP_EMAILBOXVALUEDESCR"
+                />
+                <field name="commentbox"
+                    type="checkbox" 
+                    value="1"
+                    default="0"
+                    label="PLG_SYSTEM_USERSNAP_COMMENTBOX" 
+                    description="PLG_SYSTEM_USERSNAP_COMMENTBOXDESCR"
+                />
+                <field name="commentboxph"
+                    type="text" 
+                    label="PLG_SYSTEM_USERSNAP_COMMENTBOXPH"
+                    size="50"
+                    description="PLG_SYSTEM_USERSNAP_COMMENTBOXPHDESCR"
+                />
+                <field name="button-valign" 
+                    type="list" 
+                    default="bottom" 
+                    label="PLG_SYSTEM_USERSNAP_BTNVALIGN" >
+                    <option value="top">PLG_SYSTEM_USERSNAP_BTNVALIGNTOP</option>
+                    <option value="middle">PLG_SYSTEM_USERSNAP_BTNVALIGNMIDDLE</option>
+                    <option value="bottom">PLG_SYSTEM_USERSNAP_BTNVALIGNBOTTOM</option>
+                </field>
+                <field name="button-halign" 
+                    type="list" 
+                    default="right"     
+                    label="PLG_SYSTEM_USERSNAP_BTNHALIGN">
+                    <option value="left">PLG_SYSTEM_USERSNAP_BTNHALIGNLEFT</option>
+                    <option value="right">PLG_SYSTEM_USERSNAP_BTNHALIGNRIGHT</option>
+                </field>
+                <field name="lang" 
+                    type="list" 
+                    default="en" 
+                    label="PLG_SYSTEM_USERSNAP_LANG">
+                    <option value="en">PLG_SYSTEM_USERSNAP_LANG_EN</option>
+                    <option value="de-informal">PLG_SYSTEM_USERSNAP_LANG_DE_INF</option>
+					<option value="de-formal">PLG_SYSTEM_USERSNAP_LANG_DE_FOR</option>
+					<option value="fr">PLG_SYSTEM_USERSNAP_LANG_FR</option>
+					<option value="es">PLG_SYSTEM_USERSNAP_LANG_ES</option>
+					<option value="pl">PLG_SYSTEM_USERSNAP_LANG_PL</option>
+					<option value="fa">PLG_SYSTEM_USERSNAP_LANG_FA</option>
+					<option value="it">PLG_SYSTEM_USERSNAP_LANG_IT</option>
+					<option value="jp">PLG_SYSTEM_USERSNAP_LANG_JP</option>
+					<option value="ko">PLG_SYSTEM_USERSNAP_LANG_KO</option>
+					<option value="hu">PLG_SYSTEM_USERSNAP_LANG_HU</option>
+					<option value="da">PLG_SYSTEM_USERSNAP_LANG_DA</option>
+					<option value="cz">PLG_SYSTEM_USERSNAP_LANG_CZ</option>
+					<option value="sk">PLG_SYSTEM_USERSNAP_LANG_SK</option>
+					<option value="no">PLG_SYSTEM_USERSNAP_LANG_NO</option>
+					<option value="nl">PLG_SYSTEM_USERSNAP_LANG_NL</option>
+					<option value="fi">PLG_SYSTEM_USERSNAP_LANG_FI</option>
+					<option value="pt">PLG_SYSTEM_USERSNAP_LANG_PT</option>
+					<option value="tr">PLG_SYSTEM_USERSNAP_LANG_TR</option>
+					<option value="ru">PLG_SYSTEM_USERSNAP_LANG_RU</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>   
+</extension>
