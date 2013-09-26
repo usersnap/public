@@ -8,3 +8,4 @@ Currently there are libraries available for:
  - drupal
  - joomla
  - jquery
+ - extjs
