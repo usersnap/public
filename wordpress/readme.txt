@@ -1,10 +1,10 @@
 === Usersnap ===
 Contributors: usersnap
 Donate link: http://usersnap.com/
-Tags: feedback, visual feedback, bug tracking, screenshots, image, images, plugin, comments
+Tags: feedback, visual feedback, bug tracking, screenshot, image, images, plugin, bug, bugs, typo, screenshots, widget
 Requires at least: 3.0
-Tested up to: 3.3.1
-Stable tag: 1.9
+Tested up to: 3.6.1
+Stable tag: 2.3
 
 Get screenshots directly form your readers, customers and users. Usersnap helps you to get visual feedback easily.
 
@@ -15,7 +15,7 @@ Usersnap is like the Google+ Feedback tool for your sites.
 
 == Installation ==
 
-1. Upload `usersnap.php` to the `/wp-content/plugins/usersnap` directory
+1. Upload the plugin files to the `/wp-content/plugins/usersnap` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Get your free API key: http://www.usersnap.com
 1. Configure the plugin (accessible via the admin menu)
@@ -25,15 +25,34 @@ Usersnap is like the Google+ Feedback tool for your sites.
 
 = Where do I get a Usersnap API key? =
 
-Go to http://usersnap.com and sign up, you can create your API keys for your site after you've logged in.
-
+Either directly in your wordpress plugin or go to http://usersnap.com and sign up! 
+You can create and manage your API keys for your site after you've logged in.
 
 == Screenshots ==
 
 1. This screenshot shows the admin page of the Usersnap plugin.
+2. The initial setup page where you can create an api key!
 
 
 == Changelog ==
+
+= 2.3 = 
+* fixed php issset check
+
+= 2.2 = 
+* storing api key problem solved!
+
+= 2.1 = 
+* small hotfixes
+
+= 2.0 = 
+* setup a usersnap account directly in your wordpress
+
+= 1.11 = 
+* changed search tags
+
+= 1.10 = 
+* added a few option fixes
 
 = 1.9 = 
 * added a few langauges, added custom button text attribute, added shortcut feature
