@@ -1,6 +1,15 @@
 <?php
+/*------------------------------------------------------------------------
+# usersnap.php - Usersnap - A Screenshot paints a thousand words
+# ------------------------------------------------------------------------
+# author    Usersnap GmbH
+# copyright Copyright (C) 2013 usersnap.com. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.usersnap.com
+# Technical Support:  Forum - contact@usersnap.com
+-------------------------------------------------------------------------*/
 // no direct access
-defined('JPATH_BASE') or die;
+defined('JPATH_BASE') or die( 'Restricted access' ); 
  
 /**
  * Example system plugin
