@@ -1,7 +1,7 @@
 /**
  * @class Ext.ux.Usersnap
  * @extends Object
- * @version 1.0
+ * @version 2.0
  * @author Usersnap (http://usersnap.com)
  * Adds Usersnap to your ExtJS Application
  */
@@ -46,16 +46,14 @@ Ext.define('Ext.ux.Usersnap', {
              'cancel'
         );
         this.mixins.observable.constructor.apply(this, arguments);
+        var re = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+        if (cfg.apiKey === undefined || !re.test(cfg.apiKey)) {
+            Ext.Error.raise('Please specify a valid apikey!'); 
+            return;
+        }
         //init usersnap
         var me = this;
         this.usersnapConfig = {
-            apiKey: cfg.apiKey,
-            lang: cfg.lang||'en',
-            commentBox: cfg.commentBox||false,
-            commentRequired: cfg.commentRequired||false,
-            emailBox: cfg.emailBox||false,
-            emailRequired: cfg.emailRequired||false,
-            shortcut: cfg.shortcut||false,
             mode: 'report',
             loadHandler: function() {
                 me.usersnapLoaded = true;
@@ -80,7 +78,24 @@ Ext.define('Ext.ux.Usersnap', {
                 }, 1);
             }
         };
-        
+        if (cfg.lang !== undefined) {
+            this.usersnapConfig.lang = cfg.lang;
+        }
+        if (cfg.commentBox !== undefined) {
+            this.usersnapConfig.commentBox = cfg.commentBox;
+        }
+        if (cfg.commentRequired !== undefined) {
+            this.usersnapConfig.commentRequired = cfg.commentRequired;
+        }
+        if (cfg.emailBox !== undefined) {
+            this.usersnapConfig.emailBox = cfg.emailBox;
+        }
+        if (cfg.emailRequired !== undefined) {
+            this.usersnapConfig.emailRequired = cfg.emailRequired;
+        }
+        if (cfg.shortcut !== undefined) {
+            this.usersnapConfig.shortcut = cfg.shortcut;
+        }
         if (cfg.btnText !== undefined) {
             this.usersnapConfig.btnText = cfg.btnText;
         }
@@ -98,15 +113,13 @@ Ext.define('Ext.ux.Usersnap', {
         }
         if (cfg.tools !== undefined) {
             this.usersnapConfig.tools = cfg.tools;
-        } else {
-            this.usersnapConfig.tools = ["pen", "highlight", "note"];    
         }
         
         _usersnapconfig = this.usersnapConfig;
         var s = document.createElement('script');
         s.type = 'text/javascript';
         s.async = true;
-        s.src = '//api.usersnap.com/usersnap.js';
+        s.src = '//api.usersnap.com/beta/'+cfg.apiKey+'.js';
         var x = document.getElementsByTagName('head')[0];
         x.appendChild(s);
     },
