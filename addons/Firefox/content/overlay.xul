@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://snapbugz/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://snapbugz/locale/overlay.dtd">
+<overlay id="spanbugz-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://snapbugz/content/snapbugz.js"/>
+
+ <popup id="contentAreaContextMenu">
+  <menuitem id="snapbugz-do" label="&snapbugzmenu;" oncommand="SnapBugz.Do(this)"/>
+</popup>
+</overlay>
