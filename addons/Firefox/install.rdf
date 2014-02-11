@@ -4,7 +4,7 @@
 
   <Description about="urn:mozilla:install-manifest">
   
-    <em:id>snapbugz@snapbugz.com</em:id>
+    <em:id>spanbugz@spanbugz.com</em:id>
     <em:name>Snapbugz</em:name>
     <em:version>1.4.1</em:version>
     <em:type>2</em:type>
