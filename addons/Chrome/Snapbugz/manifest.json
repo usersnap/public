@@ -2,8 +2,9 @@
   "manifest_version": 2,
 
   "name": "Snapbugz",
-  "description": "Snap a bug on a page and discuss it on snapbugz.com",
-  "version": "1.0",
+  "short_name": "Snapbugz",
+  "description": "Snapbugz is the simplest free Bugtracker you will ever use. Enter a URL, annotate the screen, invite and discuss your result.",
+  "version": "1.0.1",
   
   "icons": { "16": "images/icon16.png",
            "48": "images/icon48.png",
