@@ -5,8 +5,8 @@
   <Description about="urn:mozilla:install-manifest">
   
     <em:id>snapbugz@snapbugz.com</em:id>
-    <em:name>SnapBugz</em:name>
-    <em:version>1.3</em:version>
+    <em:name>Snapbugz</em:name>
+    <em:version>1.4</em:version>
     <em:type>2</em:type>
     <em:description>The easiest way to discuss bugs. Found a bug and/or something remarkable on a website? Use this addon to discuss it with others.</em:description>
     <em:creator>Bogomil Shopov(bogomil@talkweb.eu)</em:creator>
