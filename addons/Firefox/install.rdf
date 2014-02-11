@@ -6,12 +6,13 @@
   
     <em:id>snapbugz@snapbugz.com</em:id>
     <em:name>Snapbugz</em:name>
-    <em:version>1.4</em:version>
+    <em:version>1.4.1</em:version>
     <em:type>2</em:type>
     <em:description>The easiest way to discuss bugs. Found a bug and/or something remarkable on a website? Use this addon to discuss it with others.</em:description>
-    <em:creator>Bogomil Shopov(bogomil@talkweb.eu)</em:creator>
+    <em:creator>Gregor Dorfbauer</em:creator>
     <em:homepageURL>http://snapbugz.com</em:homepageURL>
     <em:iconURL>chrome://snapbugz/skin/icon.png</em:iconURL>
+    <em:contributor>Bogomil Shopov</em:contributor>
     <!-- Firefox -->
     <em:targetApplication>
       <Description>
