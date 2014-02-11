@@ -5,6 +5,6 @@ var SnapBugz = {
   },
  Do: function() {
 	this.getcURL();
-	gBrowser.selectedTab = gBrowser.addTab("http://snapbugz.com/do/" + this.cURL);
+	gBrowser.selectedTab = gBrowser.addTab("http://snapbugz.com/fetch?q=" + encodeURIComponent(this.cURL));
   }
 };
