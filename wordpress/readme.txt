@@ -4,7 +4,7 @@ Donate link: http://usersnap.com/
 Tags: feedback, visual feedback, bug tracking, screenshot, image, images, plugin, bug, bugs, typo, screenshots, widget
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 3.0
+Stable tag: 3.1
 
 Get screenshots directly form your readers, customers and users. Usersnap helps you to get visual feedback easily.
 
@@ -35,6 +35,10 @@ You can create and manage your API keys for your site after you've logged in.
 
 
 == Changelog ==
+
+= 3.1 =
+* changed text on configuration page
+* bug fix for double account creation
 
 = 3.0 =
 * IMPORTANT: updated to the new Usersnap widget. If you want to continue with the old widget please do not update the plugin! 

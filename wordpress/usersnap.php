@@ -3,13 +3,13 @@
 Plugin Name: Usersnap
 Plugin URI: http://www.usersnap.com
 Description: Usersnap helps website owners to get feedback in form of screeenshots from their customers, readers or users.
-Version: 3.0
+Version: 3.1
 Author: Usersnap
 Author URI: http://usersnap.com
 License: GPL v2
 */
 
-define('USERSNAP_VERSION', '3.0');
+define('USERSNAP_VERSION', '3.1');
 define('USERSNAP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 if ( is_admin() ){ // admin actions
@@ -59,7 +59,7 @@ function us_add_js() {
 			    var s = document.createElement('script');
 			    s.type = 'text/javascript';
 			    s.async = true;
-			    s.src = '//api.usersnap.com/beta/<?php echo $options['api-key']; ?>.js';
+			    s.src = '//api.usersnap.com/load/<?php echo $options['api-key']; ?>.js';
 			    var x = document.getElementsByTagName('head')[0];
 			    x.appendChild(s);
 			})();
@@ -84,10 +84,10 @@ function us_register_settings() {
 	add_settings_field('us-api-key', 'Enter your Usersnap API key', 'usersnap_input_text', 'usersnap', 'usersnap_main');
 	
 	//page usersnap_pg_new
-	add_settings_section('usersnap_new', 'Create a Usersnap account', 'usersnap_section_new', 'usersnap_pg_new');
+	add_settings_section('usersnap_new', 'Create your Usersnap account', 'usersnap_section_new', 'usersnap_pg_new');
 	add_settings_field('us-user-email', 'Your email', 'usersnap_input_user_email', 'usersnap_pg_new', 'usersnap_new');
 	add_settings_field('us-user-url', 'Blog URL', 'usersnap_input_user_url', 'usersnap_pg_new', 'usersnap_new');
-	add_settings_field('us-user-pwd', 'Choose a new password', 'usersnap_input_user_pwd', 'usersnap_pg_new', 'usersnap_new');
+	add_settings_field('us-user-pwd', 'Choose a password', 'usersnap_input_user_pwd', 'usersnap_pg_new', 'usersnap_new');
 	add_settings_field('us-user-pwd2', 'Retype your password', 'usersnap_input_user_pwd2', 'usersnap_pg_new', 'usersnap_new');
 	
 
@@ -129,7 +129,7 @@ function usersnap_section_text() {
 	<table class="form-table">
 		<tr>
 			<td>
-               <div class="us-box">Manage and configure your API keys on <a href="https://usersnap.com/apikeys" target="_blank">http://usersnap.com/apikeys</a>.</div>  
+               <div class="us-box">Manage and configure the button theme and settings on your <a href="https://usersnap.com/apikeys" target="_blank">Usersnap site configuration</a>.</div>  
             </td>
 		</tr>
 	</table>
@@ -385,14 +385,15 @@ function us_option_page() {
 				</tr>
 			</table>
 			<p class="submit">
-				<input type="submit" name="us_btn_setup" class="button-primary" value="<?php _e('Create Usersnap account') ?>" />
+				<input type="submit" id="us-btn-setup" name="us_btn_setup" class="button-primary" value="<?php _e('Create Usersnap account') ?>" />
 			</p>
 			<script type="text/javascript">
-			jQuery('#us-settings-form').submit(function() {
+			jQuery('#us-settings-form').submit(function(form) {
 				if ((jQuery('#us-user-pwd').val()==='') || (jQuery('#us-user-pwd').val() !== jQuery('#us-user-pwd2').val())) {
-					alert('Your passwords are empty or not equal!');
+					alert('<?php _e('Your passwords are empty or not equal!') ?>');
 					return false;
 				}
+				jQuery('#us-btn-setup').attr("disabled", true).val("<?php _e('Please wait...') ?>");
 			});
 			</script>
 			<?php
@@ -412,7 +413,7 @@ function us_option_page() {
 						var s = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 						if (!s.test(jQuery('#us-api-key').val())) {
 							jQuery('#us-api-key').focus();
-							alert('Your API key is not valid, please check again!');
+							alert('<?php _e('Your API key is not valid, please check again!') ?>');
 							return false;
 						}
 					}
