@@ -3,13 +3,13 @@
 Plugin Name: Usersnap
 Plugin URI: http://www.usersnap.com
 Description: Usersnap helps website owners to get feedback in form of screeenshots from their customers, readers or users.
-Version: 3.1
+Version: 3.2
 Author: Usersnap
 Author URI: http://usersnap.com
 License: GPL v2
 */
 
-define('USERSNAP_VERSION', '3.1');
+define('USERSNAP_VERSION', '3.2');
 define('USERSNAP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 if ( is_admin() ){ // admin actions
@@ -23,7 +23,7 @@ function us_add_js() {
 	$options = get_option('usersnap_options');
 	//check if we should display usersnap
 	$dispUS = false;
-	if (strlen($options['api-key'])>0) {
+	if (isset($options['api-key']) && strlen($options['api-key'])>0) {
 		if (!isset($options['visible-for'])) {
 			$options['visible-for']="all";
 		}
@@ -150,9 +150,13 @@ function usersnap_section_new() {
 
 function usersnap_input_text() {
 	$options = get_option('usersnap_options');
-	?><input id="us-api-key" style="width:300px;" name="usersnap_options[api-key]" size="40" type="text" value="<?php echo $options['api-key']; ?>" /><?php
-	if (strlen($options['api-key']) > 0) {
-		?>&nbsp;<a href="https://usersnap.com/configurator/v2?key=<?php echo $options['api-key']; ?>" target="_blank">configure</a><?php
+	$key = "";
+	if (isset($options['api-key'])) {
+		$key = $options['api-key'];
+	}
+	?><input id="us-api-key" style="width:300px;" name="usersnap_options[api-key]" size="40" type="text" value="<?php echo $key; ?>" /><?php
+	if (strlen($key) > 0) {
+		?>&nbsp;<a href="https://usersnap.com/configurator/v2?key=<?php echo $key; ?>" target="_blank">configure</a><?php
 	}
 }
 
@@ -162,7 +166,7 @@ function usersnap_options_validate($input) {
 	}
 	$input["message"] = "";
 	$input["error"] = false;
-	if (isset($_POST['us_btn_setup']) && ($input["usersnap-api-requ"] !== true)) {
+	if (isset($_POST['us_setup']) && ($input["usersnap-api-requ"] !== true)) {
 		$input["usersnap-api-requ"] = true;
 		//setup
 		$email = $input["user-email"];
@@ -336,7 +340,7 @@ function us_option_page() {
 	}
 	$options = get_option('usersnap_options');
 	$tabs = array();
-	if (strlen($options['api-key'])>0) {
+	if (isset($options['api-key']) && strlen($options['api-key'])>0) {
 		$tabs = array(
 			'configure' => 'Configure'
 		);
@@ -385,6 +389,7 @@ function us_option_page() {
 				</tr>
 			</table>
 			<p class="submit">
+				<input type="hidden" name="us_setup" value="true"/>
 				<input type="submit" id="us-btn-setup" name="us_btn_setup" class="button-primary" value="<?php _e('Create Usersnap account') ?>" />
 			</p>
 			<script type="text/javascript">
