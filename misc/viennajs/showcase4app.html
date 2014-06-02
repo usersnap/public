@@ -1,0 +1,16 @@
+<?php
+?>
+<script type="text/javascript">
+	var postOrigin = "";
+	function listener(e) {
+		if(e.data === 'hello') {
+			postOrigin = e.origin;
+			window.parent.postMessage('{"name":"Josef"}', postOrigin);
+		}
+	}
+	if (window.addEventListener){
+		addEventListener("message", listener, false)
+	} else {
+		attachEvent("onmessage", listener)
+	}
+</script>
