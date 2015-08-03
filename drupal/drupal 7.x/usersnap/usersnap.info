@@ -1,6 +1,6 @@
 name = Usersnap
 description = Integrates Usersnap
-version = 7.x-dev
+version = 7.1
 core = 7.x
 package = usersnap
 
