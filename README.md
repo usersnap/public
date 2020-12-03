@@ -1,11 +1,16 @@
-Usersnap Public repository
-==========================
-This is the public Usersnap Github repository with all our public stuff. Obtain your free 15 day trial account at https://usersnap.com.
+# Usersnap Public repository
 
-Currently there are libraries available for:
- - usersnap-api
- - wordpress
- - drupal
- - joomla
- - jquery
- - extjs
+This repository list examples for installing widgets in different popular frameworks.
+
+
+Current examples:
+ - gatsby
+ - next-js
+ - nuxt-js
+ - react-js
+ - pwa
+ - vue-js
+ 
+ If you are having issues or a request for another framework, check [GitHub discussions](https://github.com/usersnap/public/issues).
+
+Obtain your free 15 day trial account at [Usersnap.com](https://usersnap.com).

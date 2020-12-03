@@ -1,5 +1,0 @@
-content	snapbugz	content/
-style  chrome://global/content/customizeToolbar.xul chrome://snapbugz/content/button.css
-overlay	chrome://browser/content/browser.xul	chrome://snapbugz/content/overlay.xul
-skin	snapbugz	classic/1.3	skin/
-locale	snapbugz	en-US	locale/en-US/
