@@ -1,24 +1,26 @@
-# vue-js
+# Add Usersnap to Vue.js App
 
-## Project setup
-```
-yarn install
-```
+This example showcases how to add Usersnap Platform widgets in [Vue.js](https://vuejs.org/). 
+The project was created with `@vue/cli`.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Starting up the example
 
-### Compiles and minifies for production
-```
-yarn build
-```
+```bash
+# install dependencies
+$ yarn install
 
-### Lints and fixes files
-```
-yarn lint
-```
+# serve with hot reload at localhost:8080
+$ yarn serve
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+![Example](./example.png "Example")
+## Show me how it's done
+See component  `components/Usersnap.vue`.
+
+Make sure to update global api key and project api key values.
+
+If it doesn't work, post on [GitHub discussions](https://github.com/usersnap/public/issues).
+
+If you need help on how to use the api, see our [documentation](https://help.usersnap.com/docs/flexible-use-cases-for-global-snippet).
+
+
