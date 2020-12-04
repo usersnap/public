@@ -1,3 +1,4 @@
+![usersnap](./usersnap.svg "Usersnap")
 # Usersnap Public repository
 
 This repository list examples for installing widgets in different popular frameworks.
