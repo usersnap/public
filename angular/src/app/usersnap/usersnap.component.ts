@@ -9,7 +9,7 @@ export class UsersnapComponent {
 
   // Replace with the global API key from your installation page
   @Input()
-  globalApiKey: string = "2769bf7c-41e0-43e6-92db-b762d620addf";
+  globalApiKey: string = "<USERSNAP_GLOBAL_API_KEY>";
   
   @ViewChild('script') script: ElementRef;
   window = null
@@ -22,7 +22,7 @@ export class UsersnapComponent {
     this.window.onUsersnapCXLoad = function(api) {
       api.init()
       // Replace with the Project API key from your widget configuration page
-      api.show("8b25da08-53c2-45e4-a736-cb71e01a24cc")
+      api.show("<USERSNAP_API_KEY>")
     }
     var element = this.script.nativeElement;
     var script = document.createElement("script")
