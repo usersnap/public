@@ -1,0 +1,3 @@
+# Don't check auto-generated stuff into git
+node_modules
+yarn-error.log

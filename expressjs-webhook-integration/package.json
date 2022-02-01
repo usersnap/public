@@ -1,0 +1,12 @@
+{
+  "name": "expressjs-webhook-integration",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "bignum": "0.13.1",
+    "express": "4.17.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
