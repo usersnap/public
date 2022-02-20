@@ -7,7 +7,7 @@ import { useUsersnapApi } from '../UsersnapContext'
  * Please note that "rating" field is available only for
  * NPS, CSAT and Customer Engagement
  */
-export default function PassInitialValues({ labels = ['Bug', 'Urgent'], email = 'user@mail.com', assignee = 'assignee@mail.com', rating = 5 }) {
+export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail.com', assignee = 'assignee@mail.com', rating = 5 }) {
     const usersnapApi = useUsersnapApi()
 
     useEffect(() => {

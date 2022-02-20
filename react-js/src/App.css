@@ -31,6 +31,7 @@ button {
   background: none;
   border-radius: 5px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .examples {

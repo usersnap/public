@@ -70,7 +70,7 @@ export default {
       <UsernapProvider :initParams="{ nativeScreenshot: true }" v-if="currentExample === 'nativeScreenshot'">
         <div>Native screenshot</div>
       </UsernapProvider>
-      <UsernapProvider :initParams="{ nativeScreenshot: { taget: '_blank' } }" v-if="currentExample === 'nativeScreenshotInNewTab'">
+      <UsernapProvider :initParams="{ nativeScreenshot: { target: '_blank' } }" v-if="currentExample === 'nativeScreenshotInNewTab'">
         <div>Native screenshot in new tab</div>
       </UsernapProvider>
       <UsernapProvider :initParams="{
@@ -78,7 +78,7 @@ export default {
           enableScreenshot: false, // whether to enable widget screenshot
           useLocalStorage: false, // whether allowed to use user's local storage
           useSystemFonts: true, // whether widget should use browser default font rather than loading external one
-          locale: 'en' // force widget language
+          locale: 'de' // force widget language
         }" v-if="currentExample === 'otherWidgetOptions'">
         <div>Other widget options</div>
         <ul>

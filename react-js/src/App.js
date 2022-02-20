@@ -83,7 +83,7 @@ function App() {
           /**
            * "nativeScreenshot" should be object "{ target: '_blank' }"
            */
-          <UsersnapProvider initParams={{ nativeScreenshot: { taget: '_blank' } }}>
+          <UsersnapProvider initParams={{ nativeScreenshot: { target: '_blank' } }}>
             <div>Native screenshot in new tab</div>
           </UsersnapProvider>
         )}
@@ -93,7 +93,7 @@ function App() {
             enableScreenshot: false, // whether to enable widget screenshot
             useLocalStorage: false, // whether allowed to use user's local storage
             useSystemFonts: true, // whether widget should use browser default font rather than loading external one
-            locale: 'en' // force widget language
+            locale: 'de' // force widget language
           }}>
             <div>Other widget options</div>
             <ul>

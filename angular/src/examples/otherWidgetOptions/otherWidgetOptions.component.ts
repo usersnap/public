@@ -13,7 +13,7 @@ export class OtherWidgetOptionsComponent {
       enableScreenshot: false, // whether to enable widget screenshot
       useLocalStorage: false, // whether allowed to use user's local storage
       useSystemFonts: true, // whether widget should use browser default font rather than loading external one
-      locale: 'en' // force widget language
+      locale: 'de' // force widget language
     })
   }
 }

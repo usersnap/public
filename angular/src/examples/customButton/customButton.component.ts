@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { USERSNAP_PROJECT_API_EVENT_NAME } from 'src/constants';
+import { USERSNAP_PROJECT_API_EVENT_NAME, USERSNAP_PROJECT_API_KEY } from 'src/constants';
 import { UsersnapService } from 'src/services/usersnap.service';
 
 /**
@@ -44,7 +44,7 @@ export class CustomButtonComponent {
     this.subscription?.unsubscribe();
     this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
       if (usersnapApi) {
-        usersnapApi.logEvent(USERSNAP_PROJECT_API_EVENT_NAME)
+        usersnapApi.show(USERSNAP_PROJECT_API_KEY).then((widgetApi: any) => widgetApi.open());
       }
     });
   }

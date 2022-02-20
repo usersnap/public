@@ -10,7 +10,7 @@ export default {
     props: {
         labels: {
             type: Array,
-            default: ['Bug', 'Urgent'],
+            default: ['Bug'],
         },
         email: {
             type: String,
@@ -27,10 +27,10 @@ export default {
     },
     methods: {
         handleOpenWidget(event) {
-            event.api.setValue('labels', labels);
-            event.api.setValue('visitor', email);
-            event.api.setValue('assignee', assignee);
-            event.api.setValue('rating', rating);
+            event.api.setValue('labels', this.labels);
+            event.api.setValue('visitor', this.email);
+            event.api.setValue('assignee', this.assignee);
+            event.api.setValue('rating', this.rating);
         }
     },
     created() {

@@ -7,7 +7,7 @@ import { useUsersnapApi } from '../UsersnapContext'
  * in the dashboard configuration of your widget in the "Display" tab you have
  * audience "Nobody". Then you open your feedback button or widget whenever you need.
  */
-export default function CustomDisplayLogic({ shouldShow }) {
+export default function CustomDisplayLogic({ shouldShow = true }) {
     const usersnapApi = useUsersnapApi()
 
     useEffect(() => {

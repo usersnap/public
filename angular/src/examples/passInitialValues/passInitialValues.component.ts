@@ -8,7 +8,7 @@ import { UsersnapService } from 'src/services/usersnap.service';
   providers: [UsersnapService]
 })
 export class PassInitialValuesComponent {
-  @Input() labels = ['Bug', 'Urgent'];
+  @Input() labels = ['Bug'];
   @Input() email = 'user@mail.com';
   @Input() assignee = 'assignee@mail.com';
   @Input() rating = 5;
