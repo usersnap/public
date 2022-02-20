@@ -3,14 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { UsersnapProvider } from './UsersnapContext';
 import CustomButton from './examples/CustomButton';
-import Basic from './examples/Basic';
-import OnlyForLoggedInUsers from './examples/OnlyForLoggedInUsers';
-import OnlyWithCertainEmails from './examples/OnlyWithCertainEmails'
 import CustomDisplayLogic from './examples/CustomDisplayLogic';
 import PassInitialValues from './examples/PassInitialValues';
 import WidgetApiEvents from './examples/WidgetApiEvents';
-import NativeScreenshot from './examples/NativeScreenshot';
-import OtherWidgetOptions from './examples/OtherWidgetOptions';
 
 function App() {
   const [currentExample, setCurrentExample] = useState('basic')
@@ -35,7 +30,7 @@ function App() {
       <div className="examples">
         {currentExample === 'basic' && (
           <UsersnapProvider>
-            <Basic />
+            <div>Basic installation</div>
           </UsersnapProvider>
         )}
         {currentExample === 'customButton' && (
@@ -49,7 +44,7 @@ function App() {
            * to consider the current user as logged in one
            */
           <UsersnapProvider initParams={{ user: { userId: '123' }}}>
-            <OnlyForLoggedInUsers />
+            <div>Only logged in users should see that</div>
           </UsersnapProvider>
         )}
         {currentExample === 'onlyWithCertainEmails' && (
@@ -58,7 +53,7 @@ function App() {
            * to the list of allowed or not-allowed emails
            */
           <UsersnapProvider initParams={{ user: { email: 'user@mail.com' }}}>
-            <OnlyWithCertainEmails />
+            <div>Only users with included or not includes emails should see that</div>
           </UsersnapProvider>
         )}
         {currentExample === 'customDisplayLogic' && (
@@ -81,7 +76,15 @@ function App() {
            * "nativeScreenshot" should be "true" value or "{ target: '_self' }"
            */
           <UsersnapProvider initParams={{ nativeScreenshot: true }}>
-            <NativeScreenshot />
+            <div>Native screenshot</div>
+          </UsersnapProvider>
+        )}
+        {currentExample === 'nativeScreenshotInNewTab' && (
+          /**
+           * "nativeScreenshot" should be object "{ target: '_blank' }"
+           */
+          <UsersnapProvider initParams={{ nativeScreenshot: { taget: '_blank' } }}>
+            <div>Native screenshot in new tab</div>
           </UsersnapProvider>
         )}
         {currentExample === 'otherWidgetOptions' && (
@@ -92,7 +95,14 @@ function App() {
             useSystemFonts: true, // whether widget should use browser default font rather than loading external one
             locale: 'en' // force widget language
           }}>
-            <OtherWidgetOptions />
+            <div>Other widget options</div>
+            <ul>
+                <li>collectGeoLocation</li>
+                <li>enableScreenshot</li>
+                <li>useLocalStorage</li>
+                <li>useSystemFonts</li>
+                <li>locale</li>
+            </ul>
           </UsersnapProvider>
         )}
       </div>

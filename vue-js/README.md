@@ -1,26 +1,29 @@
-# Add Usersnap to Vue.js App
+# vue-js
 
-This example showcases how to add Usersnap Platform widgets in [Vue.js](https://vuejs.org/). 
-The project was created with `@vue/cli`.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Starting up the example
+## Recommended IDE Setup
 
-```bash
-# install dependencies
-$ yarn install
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-# serve with hot reload at localhost:8080
-$ yarn serve
+## Customize configuration
 
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
 ```
-![Example](./example.png "Example")
-## Show me how it's done
-See component  `components/Usersnap.vue`.
 
-Make sure to update global api key and project api key values.
+### Compile and Hot-Reload for Development
 
-If it doesn't work, post on [GitHub discussions](https://github.com/usersnap/public/issues).
+```sh
+npm run dev
+```
 
-If you need help on how to use the api, see our [documentation](https://help.usersnap.com/docs/flexible-use-cases-for-global-snippet).
+### Compile and Minify for Production
 
-
+```sh
+npm run build
+```
