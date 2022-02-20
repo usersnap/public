@@ -53,7 +53,7 @@ function App() {
            * to the list of allowed or not-allowed emails
            */
           <UsersnapProvider initParams={{ user: { email: 'user@mail.com' }}}>
-            <div>Only users with included or not includes emails should see that</div>
+            <div>Only users with allowed emails should see that</div>
           </UsersnapProvider>
         )}
         {currentExample === 'customDisplayLogic' && (

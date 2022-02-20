@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+  currentExample = 'basic'
+
+  setCurrentExample(example: string) {
+    this.currentExample = example;
+  }
 }

@@ -1,23 +1,27 @@
-# Add Usersnap to Angular
+# Angular
 
-This example showcases how to add Usersnap Platform widgets to Angular. The project is an standard Angular project created with `ng new angular`.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
-## Starting up the example
-```bash
-    npm install
-    ng serve
-```
+## Development server
 
-The site should be up and running on `http://localhost:4200/`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-![Example](./example.png "Example")
+## Code scaffolding
 
-## Show me how it's done
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-The component to handle the widget uses a Angular workaround to be able to inject scripts from a component. Check `src/app/usersnap/` for details. The usersnap component can then be used as seen in `src/app/app.component.html`
+## Build
 
-Make sure to update global api key and project api key values.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-If it doesn't work, post on [GitHub discussions](https://github.com/usersnap/public/issues).
+## Running unit tests
 
-If you need help on how to use the api, see our [documentation](https://help.usersnap.com/docs/flexible-use-cases-for-global-snippet).
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
