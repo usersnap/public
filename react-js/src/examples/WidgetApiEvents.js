@@ -1,12 +1,6 @@
 import { useEffect } from 'react'
 import { useUsersnapApi } from '../UsersnapContext'
 
-/**
- * You can define initial values for a few fields in your widget.
- * Important that those fields must exist in your widget.
- * Please note that "rating" field is available only for
- * NPS, CSAT and Customer Engagement
- */
 export default function WidgetApiEvents() {
     const usersnapApi = useUsersnapApi()
 

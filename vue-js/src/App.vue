@@ -52,10 +52,22 @@ export default {
       <UsernapProvider v-if="currentExample === 'customButton'">
         <CustomButton />
       </UsernapProvider>
-      <UsernapProvider :initParams="{ user: { userId: '123' }}" v-if="currentExample === 'onlyForLoggedInUsers'">
+      <UsernapProvider :initParams="{
+        /**
+        * 'userId' should be non-falsy value in order for the widget
+        * to consider the current user as logged in one
+        */
+        user: { userId: '123' }
+      }" v-if="currentExample === 'onlyForLoggedInUsers'">
         <div>Only logged in users should see that</div>
       </UsernapProvider>
-      <UsernapProvider :initParams="{ user: { email: 'user@mail.com' }}" v-if="currentExample === 'onlyWithCertainEmails'">
+      <UsernapProvider :initParams="{
+        /**
+        * 'email' should be a string which will be compared
+        * to the list of allowed or not-allowed emails
+        */
+        user: { email: 'user@mail.com' }
+      }" v-if="currentExample === 'onlyWithCertainEmails'">
         <div>Only users with included emails should see that</div>
       </UsernapProvider>
       <UsernapProvider v-if="currentExample === 'customDisplayLogic'">
@@ -67,10 +79,20 @@ export default {
       <UsernapProvider v-if="currentExample === 'widgetApiEvents'">
         <WidgetApiEvents />
       </UsernapProvider>
-      <UsernapProvider :initParams="{ nativeScreenshot: true }" v-if="currentExample === 'nativeScreenshot'">
+      <UsernapProvider :initParams="{
+        /**
+        * 'nativeScreenshot' should be 'true' value or '{ target: '_self' }'
+        */
+        nativeScreenshot: true
+      }" v-if="currentExample === 'nativeScreenshot'">
         <div>Native screenshot</div>
       </UsernapProvider>
-      <UsernapProvider :initParams="{ nativeScreenshot: { target: '_blank' } }" v-if="currentExample === 'nativeScreenshotInNewTab'">
+      <UsernapProvider :initParams="{
+        /**
+        * 'nativeScreenshot' should be an object '{ target: '_blank' }'
+        */
+        nativeScreenshot: { target: '_blank' }
+      }" v-if="currentExample === 'nativeScreenshotInNewTab'">
         <div>Native screenshot in new tab</div>
       </UsernapProvider>
       <UsernapProvider :initParams="{
