@@ -8,6 +8,7 @@ import { NativeScreenshotInNewTabComponent } from 'src/examples/nativeScreenshot
 import { OnlyForLoggedInUsersComponent } from 'src/examples/onlyForLoggedInUsers/onlyForLoggedInUsers.component';
 import { OnlyWithCertainEmailsComponent } from 'src/examples/onlyWithCertainEmails/onlyWithCertainEmails.component';
 import { OtherWidgetOptionsComponent } from 'src/examples/otherWidgetOptions/otherWidgetOptions.component';
+import { PassHiddenValuesComponent } from 'src/examples/passHiddenValues/passHiddenValues.component';
 import { PassInitialValuesComponent } from 'src/examples/passInitialValues/passInitialValues.component';
 import { WidgetApiEventsComponent } from 'src/examples/widgetApiEvents/widgetApiEvents.component';
 
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     OnlyWithCertainEmailsComponent,
     CustomDisplayLogicComponent,
     PassInitialValuesComponent,
+    PassHiddenValuesComponent,
     WidgetApiEventsComponent,
     NativeScreenshotComponent,
     NativeScreenshotInNewTabComponent,

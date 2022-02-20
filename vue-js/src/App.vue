@@ -3,6 +3,7 @@ import UsernapProvider from './components/UsersnapProvider.vue'
 import CustomButton from './examples/CustomButton.vue'
 import CustomDisplayLogic from './examples/CustomDisplayLogic.vue'
 import PassInitialValues from './examples/PassInitialValues.vue'
+import PassHiddenValues from './examples/PassHiddenValues.vue'
 import WidgetApiEvents from './examples/WidgetApiEvents.vue'
 
 export default {
@@ -22,6 +23,7 @@ export default {
     CustomDisplayLogic,
     PassInitialValues,
     WidgetApiEvents,
+    PassHiddenValues,
   }
 }
 </script>
@@ -39,6 +41,7 @@ export default {
         <button @click="setCurrentExample('onlyWithCertainEmails')">Only with certain emails</button>
         <button @click="setCurrentExample('customDisplayLogic')">Custom display logic</button>
         <button @click="setCurrentExample('passInitialValues')">Pass initial values</button>
+        <button @click="setCurrentExample('passHiddenValues')">Pass hidden values</button>
         <button @click="setCurrentExample('widgetApiEvents')">Widget API events</button>
         <button @click="setCurrentExample('nativeScreenshot')">Native screenshot</button>
         <button @click="setCurrentExample('nativeScreenshotInNewTab')">Native screenshot in new tab</button>
@@ -75,6 +78,9 @@ export default {
       </UsernapProvider>
       <UsernapProvider v-if="currentExample === 'passInitialValues'">
         <PassInitialValues />
+      </UsernapProvider>
+      <UsernapProvider v-if="currentExample === 'passHiddenValues'">
+        <PassHiddenValues />
       </UsernapProvider>
       <UsernapProvider v-if="currentExample === 'widgetApiEvents'">
         <WidgetApiEvents />

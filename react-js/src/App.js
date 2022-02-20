@@ -6,6 +6,7 @@ import CustomButton from './examples/CustomButton';
 import CustomDisplayLogic from './examples/CustomDisplayLogic';
 import PassInitialValues from './examples/PassInitialValues';
 import WidgetApiEvents from './examples/WidgetApiEvents';
+import PassHiddenValues from './examples/PassHiddenValues';
 
 function App() {
   const [currentExample, setCurrentExample] = useState('basic')
@@ -22,6 +23,7 @@ function App() {
         <button onClick={() => setCurrentExample('onlyWithCertainEmails')}>Only with certain emails</button>
         <button onClick={() => setCurrentExample('customDisplayLogic')}>Custom display logic</button>
         <button onClick={() => setCurrentExample('passInitialValues')}>Pass initial values</button>
+        <button onClick={() => setCurrentExample('passHiddenValues')}>Pass hidden values</button>
         <button onClick={() => setCurrentExample('widgetApiEvents')}>Widget API events</button>
         <button onClick={() => setCurrentExample('nativeScreenshot')}>Native screenshot</button>
         <button onClick={() => setCurrentExample('nativeScreenshotInNewTab')}>Native screenshot in new tab</button>
@@ -59,6 +61,11 @@ function App() {
         {currentExample === 'customDisplayLogic' && (
           <UsersnapProvider>
             <CustomDisplayLogic />
+          </UsersnapProvider>
+        )}
+        {currentExample === 'passHiddenValues' && (
+          <UsersnapProvider>
+            <PassHiddenValues />
           </UsersnapProvider>
         )}
         {currentExample === 'passInitialValues' && (
