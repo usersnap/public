@@ -19,7 +19,7 @@ export class UsersnapService {
             this.script = document.createElement("script")
             this.script.defer = false
             this.script.type = "text/javascript"
-            this.script.src = `https://widget.usersnap.best/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`
+            this.script.src = `https://widget.usersnap.com/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`
             document.body.appendChild(this.script);
         })
     }
