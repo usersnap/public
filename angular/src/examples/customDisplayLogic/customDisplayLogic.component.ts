@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { USERSNAP_PROJECT_API_KEY } from 'src/constants';
 import { UsersnapService } from 'src/services/usersnap.service';
 
@@ -11,10 +10,7 @@ import { UsersnapService } from 'src/services/usersnap.service';
 export class CustomDisplayLogicComponent {
   @Input() shouldShow = true;
 
-  private subscription: Subscription | null = null
-  constructor(private usersnapService: UsersnapService) {
-    this.usersnapService.initialize()
-  }
+  constructor(private usersnapService: UsersnapService) {}
 
   /**
    * In order to have custom logic to show your widget you need to make sure that
@@ -22,15 +18,10 @@ export class CustomDisplayLogicComponent {
    * audience "Nobody". Then you open your feedback button or widget whenever you need.
    */
   ngOnInit() {
-    this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
-      if (usersnapApi && this.shouldShow) {
+    this.usersnapService.initialize().then((usersnapApi) => {
+      if (this.shouldShow) {
         usersnapApi.show(USERSNAP_PROJECT_API_KEY);
-        this.subscription?.unsubscribe();
       }
-    })
-  }
-
-  ngOnDestroy() {
-    this.subscription?.unsubscribe();
+    });
   }
 }

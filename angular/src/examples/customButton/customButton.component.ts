@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { USERSNAP_PROJECT_API_EVENT_NAME, USERSNAP_PROJECT_API_KEY } from 'src/constants';
 import { UsersnapService } from 'src/services/usersnap.service';
 
@@ -16,7 +15,6 @@ import { UsersnapService } from 'src/services/usersnap.service';
   providers: [UsersnapService]
 })
 export class CustomButtonComponent {
-  private subscription: Subscription | null = null
   constructor(private usersnapService: UsersnapService) {
     this.usersnapService.initialize()
   }
@@ -28,12 +26,9 @@ export class CustomButtonComponent {
    * open - it will not open
    */
   handleOpenWidgetIfAllowed() {
-    this.subscription?.unsubscribe();
-    this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
-      if (usersnapApi) {
-        usersnapApi.logEvent(USERSNAP_PROJECT_API_EVENT_NAME)
-      }
-    });
+    if (this.usersnapService.usersnapApi) {
+      this.usersnapService.usersnapApi.logEvent(USERSNAP_PROJECT_API_EVENT_NAME)
+    }
   }
 
   /**
@@ -41,15 +36,8 @@ export class CustomButtonComponent {
    * no matter what
    */
   handleOpenWidgetForce() {
-    this.subscription?.unsubscribe();
-    this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
-      if (usersnapApi) {
-        usersnapApi.show(USERSNAP_PROJECT_API_KEY).then((widgetApi: any) => widgetApi.open());
-      }
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscription?.unsubscribe();
+    if (this.usersnapService.usersnapApi) {
+      this.usersnapService.usersnapApi.show(USERSNAP_PROJECT_API_KEY).then((widgetApi: any) => widgetApi.open());
+    }
   }
 }

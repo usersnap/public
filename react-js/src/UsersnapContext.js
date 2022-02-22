@@ -1,27 +1,28 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { USERSNAP_GLOBAL_API_KEY } from "./constants";
 
 export const UsersnapContext = React.createContext(null);
 
 export const UsersnapProvider = ({ initParams = {}, children }) => {
-    const usersnapApiRef = useRef(null)
     const [usersnapApi, setUsersnapApi] = useState(null);
 
     useEffect(() => {
+        let usersnapApi = null
         window.onUsersnapCXLoad = function(api) {
             api.init(initParams);
-            usersnapApiRef.current = api
+            usersnapApi = api
             setUsersnapApi(api)
         }
-        var script = document.createElement('script');
+        const script = document.createElement('script');
         script.defer = 1;
         script.src = `https://widget.usersnap.com/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`;
-        document.getElementsByTagName('head')[0].appendChild(script);
+        document.head.appendChild(script);
 
         return () => {
-            if (usersnapApiRef.current) {
-                usersnapApiRef.current.destroy();
+            if (usersnapApi) {
+                usersnapApi.destroy();
             }
+            script.remove();
         }
     }, [])
 

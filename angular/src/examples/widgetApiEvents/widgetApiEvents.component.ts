@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { UsersnapService } from 'src/services/usersnap.service';
 
 @Component({
@@ -8,11 +7,7 @@ import { UsersnapService } from 'src/services/usersnap.service';
   providers: [UsersnapService]
 })
 export class WidgetApiEventsComponent {
-  private usersnapApi: any
-  private subscription: Subscription | null = null
-  constructor(private usersnapService: UsersnapService) {
-    this.usersnapService.initialize()
-  }
+  constructor(private usersnapService: UsersnapService) {}
 
   /**
    * You can define initial values for a few fields in your widget.
@@ -21,19 +16,14 @@ export class WidgetApiEventsComponent {
    * NPS, CSAT and Customer Engagement
    */
   ngOnInit() {
-    this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
-      if (usersnapApi) {
-        usersnapApi.on('load', this.handleWidgetLoad);
-        usersnapApi.on('open', this.handleWidgetOpen);
-        usersnapApi.on('beforeSubmit', this.handleWidgetBeforeSubmit);
-        usersnapApi.on('submit', this.handleWidgetSubmit);
-        usersnapApi.on('closing', this.handleWidgetClosing);
-        usersnapApi.on('close', this.handleWidgetClose);
-        usersnapApi.on('destroy', this.handleWidgetDestroy);
-
-        this.usersnapApi = usersnapApi;
-        this.subscription?.unsubscribe();
-      }
+    this.usersnapService.initialize().then((usersnapApi) => {
+      usersnapApi.on('load', this.handleWidgetLoad);
+      usersnapApi.on('open', this.handleWidgetOpen);
+      usersnapApi.on('beforeSubmit', this.handleWidgetBeforeSubmit);
+      usersnapApi.on('submit', this.handleWidgetSubmit);
+      usersnapApi.on('closing', this.handleWidgetClosing);
+      usersnapApi.on('close', this.handleWidgetClose);
+      usersnapApi.on('destroy', this.handleWidgetDestroy);
     })
   }
 
@@ -108,15 +98,14 @@ export class WidgetApiEventsComponent {
   }
 
   ngOnDestroy() {
-    if (this.usersnapApi) {
-      this.usersnapApi.off('load', this.handleWidgetLoad);
-      this.usersnapApi.off('open', this.handleWidgetOpen);
-      this.usersnapApi.off('beforeSubmit', this.handleWidgetBeforeSubmit);
-      this.usersnapApi.off('submit', this.handleWidgetSubmit);
-      this.usersnapApi.off('closing', this.handleWidgetClosing);
-      this.usersnapApi.off('close', this.handleWidgetClosing);
-      this.usersnapApi.off('destroy', this.handleWidgetDestroy);
+    if (this.usersnapService.usersnapApi) {
+      this.usersnapService.usersnapApi.off('load', this.handleWidgetLoad);
+      this.usersnapService.usersnapApi.off('open', this.handleWidgetOpen);
+      this.usersnapService.usersnapApi.off('beforeSubmit', this.handleWidgetBeforeSubmit);
+      this.usersnapService.usersnapApi.off('submit', this.handleWidgetSubmit);
+      this.usersnapService.usersnapApi.off('closing', this.handleWidgetClosing);
+      this.usersnapService.usersnapApi.off('close', this.handleWidgetClosing);
+      this.usersnapService.usersnapApi.off('destroy', this.handleWidgetDestroy);
     }
-    this.subscription?.unsubscribe();
   }
 }

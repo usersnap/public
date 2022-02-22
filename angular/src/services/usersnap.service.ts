@@ -6,30 +6,29 @@ declare const window: Window & { onUsersnapCXLoad?: (api: any) => void }
 
 @Injectable()
 export class UsersnapService {
-    private _usersnapApi: BehaviorSubject<any> = new BehaviorSubject(null);
-
-    public readonly usersnapApi: Observable<any> = this._usersnapApi.asObservable();
+    private script: HTMLScriptElement | null = null;
+    public usersnapApi: any | null = null;
 
     initialize(initParams = {}) {
-        return new Promise(resolve => {
+        return new Promise<any>(resolve => {
             window.onUsersnapCXLoad = (api: any) => {
                 api.init(initParams)
-                this._usersnapApi.next(api)
+                this.usersnapApi = api;
                 resolve(api)
             }
-            var script = document.createElement("script")
-            script.defer = false
-            script.type = "text/javascript"
-            script.src = `https://widget.usersnap.com/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`
-            document.body.appendChild(script);
+            this.script = document.createElement("script")
+            this.script.defer = false
+            this.script.type = "text/javascript"
+            this.script.src = `https://widget.usersnap.best/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`
+            document.body.appendChild(this.script);
         })
     }
 
     ngOnDestroy() {
-        const usersnapApi = this._usersnapApi.getValue();
-        if (usersnapApi) {
-            usersnapApi.destroy();
+        if (this.usersnapApi) {
+            this.usersnapApi.destroy();
         }
+        this.script?.remove();
     }
 
 }

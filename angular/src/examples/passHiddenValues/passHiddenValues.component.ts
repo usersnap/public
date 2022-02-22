@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { UsersnapService } from 'src/services/usersnap.service';
 
 @Component({
@@ -15,11 +14,7 @@ export class PassHiddenValuesComponent {
     importantData: 'From Super user'
   };
 
-  private usersnapApi: any
-  private subscription: Subscription | null = null
-  constructor(private usersnapService: UsersnapService) {
-    this.usersnapService.initialize()
-  }
+  constructor(private usersnapService: UsersnapService) {}
 
   /**
    * You can define initial values for a few fields in your widget.
@@ -28,18 +23,15 @@ export class PassHiddenValuesComponent {
    * NPS, CSAT and Customer Engagement
    */
   ngOnInit() {
-    this.subscription = this.usersnapService.usersnapApi.subscribe(usersnapApi => {
-      if (usersnapApi) {
-        usersnapApi.on('open', this.handleOpenWidget);
-        this.usersnapApi = usersnapApi;
-        this.subscription?.unsubscribe();
-      }
+    this.usersnapService.initialize().then((usersnapApi) => {
+      usersnapApi.on('open', this.handleOpenWidget);
     })
   }
 
   ngOnDestroy() {
-    this.usersnapApi?.off('open', this.handleOpenWidget);
-    this.subscription?.unsubscribe();
+    if (this.usersnapService.usersnapApi) {
+      this.usersnapService.usersnapApi.off('open', this.handleOpenWidget);
+    }
   }
 
   private handleOpenWidget = (event: any) => {
