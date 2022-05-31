@@ -1,8 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-// Replace with the API keys from your widget installation page
+// Replace with the API key from your widget installation page
 const USERSNAP_GLOBAL_API_KEY = '<USERSNAP_GLOBAL_API_KEY>'
-const USERSNAP_API_KEY = '<USERSNAP_API_KEY>'
 
 export default class MyDocument extends Document {
   render() {
@@ -20,7 +19,6 @@ export default class MyDocument extends Document {
                 // store the Usersnap global api on the window, if case you want to use it in other contexts
                 window.Usersnap = api; 
                 api.init();
-                api.show('${USERSNAP_API_KEY}') 
             }         
             `,
          }}
