@@ -66,9 +66,8 @@ const links = [
   },
 ]
 
-// Replace with the API keys from your widget installation page
+// Replace with the API key from your widget installation page
 const USERSNAP_GLOBAL_API_KEY = '<USERSNAP_GLOBAL_API_KEY>'
-const USERSNAP_API_KEY = '<USERSNAP_API_KEY>'
 
 // markup
 const IndexPage = () => {
@@ -79,7 +78,6 @@ const IndexPage = () => {
         {`
             window.onUsersnapCXLoad = function(api) {
               api.init();
-              api.show('${USERSNAP_API_KEY}') 
             }
             var script = document.createElement('script');
             script.defer = 1;
