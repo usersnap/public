@@ -16,7 +16,7 @@ app.post('/webhook-file', async function (req, res) {
   
 
   // merge request body buffers into one and convert it to string
-  const requestBody = Buffer.concat(requestBodyBuffers).toString();
+  const requestBody = Buffer.concat(requestBodyBuffers).toString('binary');
 
   // extract timestamp from header
   const headerTimestamp = req.get('X-Usersnap-Timestamp');
