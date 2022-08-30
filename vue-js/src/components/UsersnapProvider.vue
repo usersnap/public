@@ -43,7 +43,7 @@ export default {
   },
   beforeUnmount() {
     if (this.usersnapApi) {
-      this. usersnapApi.destroy();
+      this.usersnapApi.destroy();
     }
   },
 }
