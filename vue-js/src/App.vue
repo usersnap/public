@@ -12,11 +12,15 @@ export default {
       currentExample: 'basic',
     }
   },
+  computed: {
+  console: () => console,
+  window: () => window,
+},
   methods: {
     setCurrentExample(example) {
       this.currentExample = example;
     }
-  },
+  },  
   components: {
     UsernapProvider,
     CustomButton,
