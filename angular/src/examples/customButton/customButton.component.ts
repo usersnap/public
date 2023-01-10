@@ -1,7 +1,6 @@
-import { Component, ComponentFactoryResolver } from '@angular/core';
+import { Component } from '@angular/core';
 import { USERSNAP_PROJECT_API_EVENT_NAME, USERSNAP_PROJECT_API_KEY } from 'src/constants';
 import { UsersnapService } from 'src/services/usersnap.service';
-import { HttpClient } from '@angular/common/http';
 
 /**
  * There a few ways to show your widget with custom button.
@@ -16,12 +15,8 @@ import { HttpClient } from '@angular/common/http';
   providers: [UsersnapService]
 })
 export class CustomButtonComponent {
-  constructor(private usersnapService: UsersnapService, private http: HttpClient) {
+  constructor(private usersnapService: UsersnapService) {
     this.usersnapService.initialize()
-     console.log('heyo')
-    http.get('https://jsonplaceholder.typicode.com/todos/2').subscribe((data) => {
-      console.log(data)
-    })
   }
 
   /**

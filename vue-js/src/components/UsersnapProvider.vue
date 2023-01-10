@@ -31,7 +31,7 @@ export default {
     }
     const script = document.createElement('script');
     script.defer = 1;
-    script.src = `https://widget.usersnap.best/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`;
+    script.src = `https://widget.usersnap.com/global/load/${USERSNAP_GLOBAL_API_KEY}?onload=onUsersnapCXLoad`;
     document.head.appendChild(script);
 
     return () => {

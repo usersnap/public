@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BasicComponent } from 'src/examples/basic/basic.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CustomButtonComponent } from 'src/examples/customButton/customButton.component';
 import { CustomDisplayLogicComponent } from 'src/examples/customDisplayLogic/customDisplayLogic.component';
 import { NativeScreenshotComponent } from 'src/examples/nativeScreenshot/nativeScreenshot.component';
@@ -31,7 +30,6 @@ import { AppComponent } from './app.component';
     OtherWidgetOptionsComponent,
   ],
   imports: [
-    HttpClientModule,
     BrowserModule
   ],
   providers: [],
