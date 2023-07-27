@@ -2,12 +2,17 @@ import { useEffect } from 'react'
 import { useUsersnapApi } from '../UsersnapContext'
 
 /**
- * You can define initial values for a few fields in your widget.
- * Important that those fields must exist in your widget.
- * Please note that "rating" field is available only for
- * NPS, CSAT and Customer Engagement
+ * You can define hidden values for some fields which are not
+ * visible in your widget.
  */
-export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail.com', assignee = 'assignee@mail.com', rating = 5 }) {
+export default function PassHiddenValues({
+    labels = ['Bug', 'Urgent'],
+    email = 'user@mail.com',
+    assignee = 'assignee@mail.com',
+    custom = {
+        importantData: 'From Super user'
+    }
+}) {
     const usersnapApi = useUsersnapApi()
 
     useEffect(() => {
@@ -15,16 +20,16 @@ export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail
             return
         }
 
-        const handleOpenWidget = (event) => {
+        const handleOpenWidget = (event: any) => {
             event.api.setValue('labels', labels);
             event.api.setValue('visitor', email);
             event.api.setValue('assignee', assignee);
-            event.api.setValue('rating', rating);
+            event.api.setValue('custom', custom);
         }
         usersnapApi.on('open', handleOpenWidget);
 
         return () => usersnapApi.off('open');
-    }, [usersnapApi, labels, email, assignee, rating])
+    }, [usersnapApi, labels, email, assignee, custom])
 
     return <div>Pass initial values to widget</div>
 }

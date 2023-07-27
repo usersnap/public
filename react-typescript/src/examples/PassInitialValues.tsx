@@ -15,7 +15,7 @@ export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail
             return
         }
 
-        const handleOpenWidget = (event) => {
+        const handleOpenWidget = (event: any) => {
             event.api.setValue('labels', labels);
             event.api.setValue('visitor', email);
             event.api.setValue('assignee', assignee);
