@@ -15,7 +15,7 @@ export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail
             return
         }
 
-        const handleOpenWidget = (event) => {
+        const handleOpenWidget = (event: any) => {
             event.api.setValue('labels', labels);
             event.api.setValue('visitor', email);
             event.api.setValue('assignee', assignee);
@@ -23,7 +23,7 @@ export default function PassInitialValues({ labels = ['Bug'], email = 'user@mail
         }
         usersnapApi.on('open', handleOpenWidget);
 
-        return () => usersnapApi.off('open');
+        return () => usersnapApi.off('open', handleOpenWidget);
     }, [usersnapApi, labels, email, assignee, rating])
 
     return <div>Pass initial values to widget</div>

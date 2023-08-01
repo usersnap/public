@@ -7,6 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@usersnap/browser": "^0.0.5",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",

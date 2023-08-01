@@ -20,7 +20,7 @@ export default function PassHiddenValues({
             return
         }
 
-        const handleOpenWidget = (event) => {
+        const handleOpenWidget = (event: any) => {
             event.api.setValue('labels', labels);
             event.api.setValue('visitor', email);
             event.api.setValue('assignee', assignee);
@@ -28,7 +28,7 @@ export default function PassHiddenValues({
         }
         usersnapApi.on('open', handleOpenWidget);
 
-        return () => usersnapApi.off('open');
+        return () => usersnapApi.off('open', handleOpenWidget);
     }, [usersnapApi, labels, email, assignee, custom])
 
     return <div>Pass initial values to widget</div>

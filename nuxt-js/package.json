@@ -9,8 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@usersnap/browser": "^0.0.5",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
-  },
-  "devDependencies": {}
+    "nuxt": "^2.15.4"
+  }
 }

@@ -145,8 +145,7 @@ header {
 
 button {
   background: none;
-  color: white;
-  border: 1px solid white;
+  border: 1px solid black;
   margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -154,7 +153,6 @@ button {
 
 main {
   font-size: 25px;
-  color: white;
   margin-top: 20px;
 }
 
