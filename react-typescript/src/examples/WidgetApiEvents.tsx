@@ -56,10 +56,10 @@ export default function WidgetApiEvents() {
         usersnapApi.on('close', handleWidgetClose);
 
         return () => {
-            usersnapApi.off('open');
-            usersnapApi.off('beforeSubmit');
-            usersnapApi.off('submit');
-            usersnapApi.off('close');
+            usersnapApi.off('open', handleWidgetOpen);
+            usersnapApi.off('beforeSubmit', handleWidgetBeforeSubmit);
+            usersnapApi.off('submit', handleWidgetSubmit);
+            usersnapApi.off('close', handleWidgetClose);
         }
     }, [usersnapApi])
 

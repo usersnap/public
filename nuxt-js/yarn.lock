@@ -2424,10 +2424,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@usersnap/browser@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@usersnap/browser@npm:0.0.4"
-  checksum: 3060c432e93a4cb0b50934fe3729abebf5acefab4e9f60b0ba31cc6cbdc18d1c4d38414ba3f8234dd99120da9224d7394b03548e04209f70f623815469d167a4
+"@usersnap/browser@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@usersnap/browser@npm:0.0.5"
+  checksum: 170f1677369c2ee1412e6a15e79dd1eb5d179a4db63957c8fee8e014eda931054df175eff41f26a9cd4a9307fd6a710844233950f0df0a8133e4b2b627dca0b2
   languageName: node
   linkType: hard
 
@@ -7846,7 +7846,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt@workspace:."
   dependencies:
-    "@usersnap/browser": ^0.0.4
+    "@usersnap/browser": ^0.0.5
     core-js: ^3.6.5
     nuxt: ^2.15.4
   languageName: unknown

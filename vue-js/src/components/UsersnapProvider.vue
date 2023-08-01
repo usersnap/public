@@ -1,5 +1,5 @@
 <script>
-import { computed, reactive } from 'vue'
+import { computed } from 'vue'
 import { loadSpace } from '@usersnap/browser'
 import { USERSNAP_GLOBAL_API_KEY } from '../constants'
 

@@ -15,7 +15,7 @@
   },
   "license": "0BSD",
   "dependencies": {
-    "@usersnap/browser": "^0.0.4",
+    "@usersnap/browser": "^0.0.5",
     "gatsby": "^5.11.0",
     "gatsby-plugin-react-helmet": "^6.11.0",
     "react": "^18.2.0",
