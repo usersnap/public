@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios10.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name usersnapMobileSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Network
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_exported import usersnapMobileSDK
+public enum ResponseAction : Swift.String {
+  case cancelled
+  case submitted
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias UsersnapCompletionHandler = ((_ _error: Swift.Error?) -> Swift.Void)
+@_hasMissingDesignatedInitializers public class UsersnapService {
+  public static let shared: usersnapMobileSDK.UsersnapService
+  weak public var delegate: usersnapMobileSDK.UsersnapServiceDelegate?
+  public var debug: Swift.Bool
+  @objc deinit
+}
+public protocol UsersnapServiceDelegate : AnyObject {
+  func usersnapFeedbackResponse(action _action: usersnapMobileSDK.ResponseAction, data _data: Swift.Dictionary<Swift.String, Any>, error _error: Swift.Error?)
+}
+extension usersnapMobileSDK.UsersnapService {
+  public var apiKey: Swift.String? {
+    get
+  }
+  public func configure(apiKey _key: Swift.String, delegate _delegate: usersnapMobileSDK.UsersnapServiceDelegate?)
+  public func openFeedbackView(completion _completion: usersnapMobileSDK.UsersnapCompletionHandler?)
+  public func openFeedbackView(customData _custom: Swift.Dictionary<Swift.String, Any>?, completion _completion: usersnapMobileSDK.UsersnapCompletionHandler?)
+  public func openFeedbackView(email _email: Swift.String?, customData _custom: Swift.Dictionary<Swift.String, Any>?, completion _completion: usersnapMobileSDK.UsersnapCompletionHandler?)
+  public func openFeedbackView(viewController _vc: UIKit.UIViewController?, email _email: Swift.String?, customData _custom: Swift.Dictionary<Swift.String, Any>?, completion _completion: usersnapMobileSDK.UsersnapCompletionHandler?)
+  public func printLanguageKeys()
+}
+extension usersnapMobileSDK.ResponseAction : Swift.Equatable {}
+extension usersnapMobileSDK.ResponseAction : Swift.Hashable {}
+extension usersnapMobileSDK.ResponseAction : Swift.RawRepresentable {}
