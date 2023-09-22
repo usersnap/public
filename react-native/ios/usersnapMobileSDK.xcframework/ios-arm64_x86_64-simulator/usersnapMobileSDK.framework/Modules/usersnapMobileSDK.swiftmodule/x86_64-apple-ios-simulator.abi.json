@@ -1,0 +1,1521 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ResponseAction",
+        "printedName": "ResponseAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(usersnapMobileSDK.ResponseAction.Type) -> usersnapMobileSDK.ResponseAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseAction",
+                    "printedName": "usersnapMobileSDK.ResponseAction",
+                    "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "usersnapMobileSDK.ResponseAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseAction",
+                        "printedName": "usersnapMobileSDK.ResponseAction",
+                        "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17usersnapMobileSDK14ResponseActionO9cancelledyA2CmF",
+            "mangledName": "$s17usersnapMobileSDK14ResponseActionO9cancelledyA2CmF",
+            "moduleName": "usersnapMobileSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "submitted",
+            "printedName": "submitted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(usersnapMobileSDK.ResponseAction.Type) -> usersnapMobileSDK.ResponseAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseAction",
+                    "printedName": "usersnapMobileSDK.ResponseAction",
+                    "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "usersnapMobileSDK.ResponseAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseAction",
+                        "printedName": "usersnapMobileSDK.ResponseAction",
+                        "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17usersnapMobileSDK14ResponseActionO9submittedyA2CmF",
+            "mangledName": "$s17usersnapMobileSDK14ResponseActionO9submittedyA2CmF",
+            "moduleName": "usersnapMobileSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(usersnapMobileSDK.ResponseAction.Type) -> usersnapMobileSDK.ResponseAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseAction",
+                    "printedName": "usersnapMobileSDK.ResponseAction",
+                    "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "usersnapMobileSDK.ResponseAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseAction",
+                        "printedName": "usersnapMobileSDK.ResponseAction",
+                        "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17usersnapMobileSDK14ResponseActionO5erroryA2CmF",
+            "mangledName": "$s17usersnapMobileSDK14ResponseActionO5erroryA2CmF",
+            "moduleName": "usersnapMobileSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "usersnapMobileSDK.ResponseAction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseAction",
+                    "printedName": "usersnapMobileSDK.ResponseAction",
+                    "usr": "s:17usersnapMobileSDK14ResponseActionO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17usersnapMobileSDK14ResponseActionO8rawValueACSgSS_tcfc",
+            "mangledName": "$s17usersnapMobileSDK14ResponseActionO8rawValueACSgSS_tcfc",
+            "moduleName": "usersnapMobileSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17usersnapMobileSDK14ResponseActionO8rawValueSSvp",
+            "mangledName": "$s17usersnapMobileSDK14ResponseActionO8rawValueSSvp",
+            "moduleName": "usersnapMobileSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK14ResponseActionO8rawValueSSvg",
+                "mangledName": "$s17usersnapMobileSDK14ResponseActionO8rawValueSSvg",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17usersnapMobileSDK14ResponseActionO",
+        "mangledName": "$s17usersnapMobileSDK14ResponseActionO",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UsersnapService",
+        "printedName": "UsersnapService",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UsersnapService",
+                "printedName": "usersnapMobileSDK.UsersnapService",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC6sharedACvpZ",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC6sharedACvpZ",
+            "moduleName": "usersnapMobileSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UsersnapService",
+                    "printedName": "usersnapMobileSDK.UsersnapService",
+                    "usr": "s:17usersnapMobileSDK15UsersnapServiceC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC6sharedACvgZ",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC6sharedACvgZ",
+                "moduleName": "usersnapMobileSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "usersnapMobileSDK.UsersnapServiceDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvp",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvp",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "usersnapMobileSDK.UsersnapServiceDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UsersnapServiceDelegate",
+                        "printedName": "usersnapMobileSDK.UsersnapServiceDelegate",
+                        "usr": "s:17usersnapMobileSDK23UsersnapServiceDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvg",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvg",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "usersnapMobileSDK.UsersnapServiceDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UsersnapServiceDelegate",
+                        "printedName": "usersnapMobileSDK.UsersnapServiceDelegate",
+                        "usr": "s:17usersnapMobileSDK23UsersnapServiceDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvs",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvs",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvM",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC8delegateAA0dE8Delegate_pSgvM",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "debug",
+            "printedName": "debug",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC5debugSbvp",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC5debugSbvp",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC5debugSbvg",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC5debugSbvg",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC5debugSbvs",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC5debugSbvs",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC5debugSbvM",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC5debugSbvM",
+                "moduleName": "usersnapMobileSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "apiKey",
+            "printedName": "apiKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC6apiKeySSSgvp",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC6apiKeySSSgvp",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17usersnapMobileSDK15UsersnapServiceC6apiKeySSSgvg",
+                "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC6apiKeySSSgvg",
+                "moduleName": "usersnapMobileSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(apiKey:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "usersnapMobileSDK.UsersnapServiceDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UsersnapServiceDelegate",
+                    "printedName": "usersnapMobileSDK.UsersnapServiceDelegate",
+                    "usr": "s:17usersnapMobileSDK23UsersnapServiceDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC9configure6apiKey8delegateySS_AA0dE8Delegate_pSgtF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC9configure6apiKey8delegateySS_AA0dE8Delegate_pSgtF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openFeedbackView",
+            "printedName": "openFeedbackView(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Error?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC16openFeedbackView10completionyys5Error_pSgcSg_tF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC16openFeedbackView10completionyys5Error_pSgcSg_tF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openFeedbackView",
+            "printedName": "openFeedbackView(customData:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Error?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC16openFeedbackView10customData10completionySDySSypGSg_ys5Error_pSgcSgtF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC16openFeedbackView10customData10completionySDySSypGSg_ys5Error_pSgcSgtF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openFeedbackView",
+            "printedName": "openFeedbackView(email:customData:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Error?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC16openFeedbackView5email10customData10completionySSSg_SDySSypGSgys5Error_pSgcSgtF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC16openFeedbackView5email10customData10completionySSSg_SDySSypGSgys5Error_pSgcSgtF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openFeedbackView",
+            "printedName": "openFeedbackView(viewController:email:customData:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Error?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC16openFeedbackView14viewController5email10customData10completionySo06UIViewJ0CSg_SSSgSDySSypGSgys5Error_pSgcSgtF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC16openFeedbackView14viewController5email10customData10completionySo06UIViewJ0CSg_SSSgSDySSypGSgys5Error_pSgcSgtF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printLanguageKeys",
+            "printedName": "printLanguageKeys()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK15UsersnapServiceC17printLanguageKeysyyF",
+            "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC17printLanguageKeysyyF",
+            "moduleName": "usersnapMobileSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17usersnapMobileSDK15UsersnapServiceC",
+        "mangledName": "$s17usersnapMobileSDK15UsersnapServiceC",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UsersnapServiceDelegate",
+        "printedName": "UsersnapServiceDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "usersnapFeedbackResponse",
+            "printedName": "usersnapFeedbackResponse(action:data:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseAction",
+                "printedName": "usersnapMobileSDK.ResponseAction",
+                "usr": "s:17usersnapMobileSDK14ResponseActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17usersnapMobileSDK23UsersnapServiceDelegateP0A16FeedbackResponse6action4data5erroryAA0H6ActionO_SDySSypGs5Error_pSgtF",
+            "mangledName": "$s17usersnapMobileSDK23UsersnapServiceDelegateP0A16FeedbackResponse6action4data5erroryAA0H6ActionO_SDySSypGs5Error_pSgtF",
+            "moduleName": "usersnapMobileSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : usersnapMobileSDK.UsersnapServiceDelegate>",
+            "sugared_genericSig": "<Self where Self : usersnapMobileSDK.UsersnapServiceDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17usersnapMobileSDK23UsersnapServiceDelegateP",
+        "mangledName": "$s17usersnapMobileSDK23UsersnapServiceDelegateP",
+        "moduleName": "usersnapMobileSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "usersnapMobileSDK"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 480,
+      "length": 11,
+      "value": "\"cancelled\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 514,
+      "length": 11,
+      "value": "\"submitted\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 544,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 480,
+      "length": 11,
+      "value": "\"cancelled\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 514,
+      "length": 11,
+      "value": "\"submitted\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 544,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 1548,
+      "length": 11,
+      "value": "\"iOSNative\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2027,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/feedback\/USMFeedbackController.swift",
+      "kind": "StringLiteral",
+      "offset": 1275,
+      "length": 26,
+      "value": "\"usersnapMobileSDK.UsersnapFeedbackController\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/webview\/USMWebView.swift",
+      "kind": "StringLiteral",
+      "offset": 3660,
+      "length": 8,
+      "value": "\"unkown\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/USMService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1005,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/USMService.swift",
+      "kind": "StringLiteral",
+      "offset": 1481,
+      "length": 43,
+      "value": "\"https:\/\/app.usersnap.com\/mobile-extension\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/USMService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1745,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/USMService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1827,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 339,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 363,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 389,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 412,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 339,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 363,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 389,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 412,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 339,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 363,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 389,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 412,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/private\/USMExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 10588,
+      "length": 63,
+      "value": "\"UIAlertController.UserSnap.Notification.offlineAlertDismissed\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMInternetMonitoring.swift",
+      "kind": "StringLiteral",
+      "offset": 797,
+      "length": 62,
+      "value": "\"UsernsapInternetMonitor.Constants.Notification.statusChanged\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMInternetMonitoring.swift",
+      "kind": "StringLiteral",
+      "offset": 991,
+      "length": 25,
+      "value": "\"UsernsapInternetMonitor\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMInternetMonitoring.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1055,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/USMViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 601,
+      "length": 8,
+      "value": "12121212"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/ui\/USMViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 735,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMBundle.swift",
+      "kind": "StringLiteral",
+      "offset": 2358,
+      "length": 20,
+      "value": "\"CFBundleIdentifier\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMBundle.swift",
+      "kind": "StringLiteral",
+      "offset": 2410,
+      "length": 21,
+      "value": "\"CFBundleDisplayName\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMBundle.swift",
+      "kind": "StringLiteral",
+      "offset": 2468,
+      "length": 14,
+      "value": "\"CFBundleName\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMBundle.swift",
+      "kind": "StringLiteral",
+      "offset": 2517,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/hanna\/iOS-SDK\/usersnapMobileSDK\/classes\/utility\/USMBundle.swift",
+      "kind": "StringLiteral",
+      "offset": 2585,
+      "length": 17,
+      "value": "\"CFBundleVersion\""
+    }
+  ]
+}

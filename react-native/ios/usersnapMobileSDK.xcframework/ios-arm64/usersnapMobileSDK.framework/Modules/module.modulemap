@@ -1,0 +1,11 @@
+framework module usersnapMobileSDK {
+  umbrella header "usersnapMobileSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module usersnapMobileSDK.Swift {
+  header "usersnapMobileSDK-Swift.h"
+  requires objc
+}
