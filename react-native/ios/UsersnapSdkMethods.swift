@@ -15,14 +15,15 @@ import usersnapMobileSDK
     UsersnapService.shared.configure(apiKey: apiKey,delegate: nil)
   }
   
-  @objc public func openFeedbackView() {
-    UsersnapService.shared.openFeedbackView
-     { (_error) in
-         if let error = _error {
-             print(error)
-    return
+  @objc func openFeedbackView(_ initProps: NSDictionary?) {
+    let initPropsDict = initProps as? [String: String] ?? [:]
+    let completionHandler: UsersnapCompletionHandler = { (_error) in
+        if let error = _error {
+            print(error)
+            return
+        }
+        print("success")
     }
-         print("success")
-    }
+    UsersnapService.shared.openFeedbackView(customData: nil, completion: completionHandler, initParams: initPropsDict)
   }
 }

@@ -10,5 +10,5 @@
 
 @interface RCT_EXTERN_MODULE(UsersnapSdkMethods, NSObject)
   RCT_EXTERN_METHOD(configure: (NSString *) apiKey)
-  RCT_EXTERN_METHOD(openFeedbackView)
+  RCT_EXTERN_METHOD(openFeedbackView: (NSDictionary * _Nullable) initProps)
 @end

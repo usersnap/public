@@ -15,7 +15,7 @@ function App(): JSX.Element {
   }, []);
 
   const openFeedbackView = () => {
-    UsersnapSdkMethods.openFeedbackView();
+    UsersnapSdkMethods.openFeedbackView({locale: 'de'});
   };
 
   return (

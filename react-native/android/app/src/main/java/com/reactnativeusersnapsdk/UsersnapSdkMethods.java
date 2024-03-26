@@ -15,6 +15,8 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.usersnap.usersnap_sdk.UsersnapManager;
 
 import java.util.HashMap;
@@ -44,8 +46,27 @@ public class UsersnapSdkMethods extends ReactContextBaseJavaModule {
         UsersnapManager.INSTANCE.configure(this.context, apiKey, true);
     }
 
+    static Map<String, String> toHashMap(ReadableMap map) {
+        Map<String, String> hashMap = new HashMap();
+        ReadableMapKeySetIterator iterator = map.keySetIterator();
+        while (iterator.hasNextKey()) {
+            String key = iterator.nextKey();
+            switch (map.getType(key)) {
+                case Null:
+                    hashMap.put(key, null);
+                    break;
+                case String:
+                    hashMap.put(key, map.getString(key));
+                    break;
+                default:
+                    throw new IllegalArgumentException("Could not convert object with key: " + key + ".");
+            }
+        }
+        return hashMap;
+    }
+
     @ReactMethod
-    public void openFeedbackView(final Promise promise) {
+    public void openFeedbackView(ReadableMap initParams, final Promise promise) {
         Map<String, String> customDataMap = new HashMap<String, String>();
 
         customDataMap.put("custom_message", "A custom message");
@@ -68,6 +89,6 @@ public class UsersnapSdkMethods extends ReactContextBaseJavaModule {
             }
             return null;
         };
-        UsersnapManager.INSTANCE.openFeedbackView(this.context, customDataMap, email, activity.mStartForResult);
+        UsersnapManager.INSTANCE.openFeedbackView(this.context, customDataMap, this.toHashMap(initParams), email, activity.mStartForResult);
     }
 }
