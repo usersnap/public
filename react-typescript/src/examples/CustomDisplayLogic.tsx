@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { USERSNAP_PROJECT_API_KEY } from '../constants'
-import { useUsersnapApi } from '../UsersnapContext'
+import { useUsersnapApi } from '../useUsersnapApi'
 
 /**
  * In order to have custom logic to show your widget you need to make sure that
@@ -8,15 +8,13 @@ import { useUsersnapApi } from '../UsersnapContext'
  * audience "Nobody". Then you open your feedback button or widget whenever you need.
  */
 export default function CustomDisplayLogic({ shouldShow = true }) {
-    const usersnapApi = useUsersnapApi()
+  const usersnapApi = useUsersnapApi()
 
-    useEffect(() => {
-        if (usersnapApi && shouldShow) {
-            usersnapApi.show(USERSNAP_PROJECT_API_KEY)
-        }
-    }, [usersnapApi, shouldShow])
+  useEffect(() => {
+    if (usersnapApi && shouldShow) {
+      usersnapApi.show(USERSNAP_PROJECT_API_KEY)
+    }
+  }, [usersnapApi, shouldShow])
 
-    return (
-        <div>Custom logic for displaying the widget or feedback button</div>
-    )
+  return <div>Custom logic for displaying the widget or feedback button</div>
 }
