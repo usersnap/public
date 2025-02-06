@@ -1,25 +1,23 @@
 {
-  "name": "blog-starter",
-  "version": "1.0.0",
+  "name": "next-ts",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@usersnap/browser": "^0.0.5",
-    "classnames": "2.2.6",
-    "date-fns": "2.10.0",
-    "gray-matter": "4.0.2",
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "remark": "14.0.2",
-    "remark-html": "15.0.1"
+    "@usersnap/browser": "^1.0.0",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "postcss-preset-env": "^7.8.3",
-    "tailwindcss": "^1.4.0"
-  },
-  "license": "MIT"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
 }
