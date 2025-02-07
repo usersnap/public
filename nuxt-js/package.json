@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@usersnap/browser": "^1.0.0",
+    "@usersnap/browser": "^1.0.1",
     "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
