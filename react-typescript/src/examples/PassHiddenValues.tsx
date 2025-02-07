@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useUsersnapApi } from '../useUsersnapApi'
-import type { SpaceOpenEventCallback } from '../../../../usersnap/dist/types'
+import type { SpaceOpenEventCallback } from '@usersnap/browser'
 
 /**
  * You can define hidden values for some fields which are not

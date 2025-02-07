@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useUsersnapApi } from '../useUsersnapApi'
-import type { SpaceBeforeSubmitEventCallback, SpaceCloseEventCallback, SpaceOpenEventCallback, SpaceSubmitEventCallback } from '../../../../usersnap/dist/types'
+import type { SpaceBeforeSubmitEventCallback, SpaceCloseEventCallback, SpaceOpenEventCallback, SpaceSubmitEventCallback } from '@usersnap/browser'
 
 export default function WidgetApiEvents() {
   const usersnapApi = useUsersnapApi()
