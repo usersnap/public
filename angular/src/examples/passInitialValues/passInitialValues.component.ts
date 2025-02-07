@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { UsersnapService } from 'src/services/usersnap.service';
+import { UsersnapService } from '../../services/usersnap.service';
+import type { SpaceOpenEventCallback } from '@usersnap/browser';
 
 @Component({
   selector: 'app-pass-initial-values',
@@ -10,9 +11,9 @@ export class PassInitialValuesComponent {
   @Input() labels = ['Bug'];
   @Input() email = 'user@mail.com';
   @Input() assignee = 'assignee@mail.com';
-  @Input() rating = 5;
+  @Input() rating = '5';
 
-  constructor(private usersnapService: UsersnapService) {}
+  constructor(private usersnapService: UsersnapService) { }
 
   /**
    * You can define initial values for a few fields in your widget.
@@ -32,7 +33,7 @@ export class PassInitialValuesComponent {
     }
   }
 
-  private handleOpenWidget = (event: any) => {
+  private handleOpenWidget: SpaceOpenEventCallback = (event) => {
     event.api.setValue('labels', this.labels);
     event.api.setValue('visitor', this.email);
     event.api.setValue('assignee', this.assignee);

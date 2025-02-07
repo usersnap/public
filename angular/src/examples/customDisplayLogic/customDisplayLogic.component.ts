@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { USERSNAP_PROJECT_API_KEY } from 'src/constants';
-import { UsersnapService } from 'src/services/usersnap.service';
+import { USERSNAP_PROJECT_API_KEY } from '../../constants';
+import { UsersnapService } from '../../services/usersnap.service';
 
 @Component({
   selector: 'app-custom-display-logic',
@@ -10,7 +10,7 @@ import { UsersnapService } from 'src/services/usersnap.service';
 export class CustomDisplayLogicComponent {
   @Input() shouldShow = true;
 
-  constructor(private usersnapService: UsersnapService) {}
+  constructor(private usersnapService: UsersnapService) { }
 
   /**
    * In order to have custom logic to show your widget you need to make sure that

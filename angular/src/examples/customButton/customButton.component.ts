@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { USERSNAP_PROJECT_API_EVENT_NAME, USERSNAP_PROJECT_API_KEY } from 'src/constants';
-import { UsersnapService } from 'src/services/usersnap.service';
+import { USERSNAP_PROJECT_API_EVENT_NAME, USERSNAP_PROJECT_API_KEY } from '../../constants';
+import { UsersnapService } from '../../services/usersnap.service';
 
 /**
  * There a few ways to show your widget with custom button.
@@ -37,7 +37,7 @@ export class CustomButtonComponent {
    */
   handleOpenWidgetForce() {
     if (this.usersnapService.usersnapApi) {
-      this.usersnapService.usersnapApi.show(USERSNAP_PROJECT_API_KEY).then((widgetApi: any) => widgetApi.open());
+      this.usersnapService.usersnapApi.show(USERSNAP_PROJECT_API_KEY).then((widgetApi) => widgetApi.open());
     }
   }
 }

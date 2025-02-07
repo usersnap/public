@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsersnapService } from 'src/services/usersnap.service';
+import { UsersnapService } from '../../services/usersnap.service';
 
 @Component({
   selector: 'app-only-with-certain-emails',
@@ -12,6 +12,6 @@ export class OnlyWithCertainEmailsComponent {
      * "email" should be a string which will be compared
      * to the list of allowed or not-allowed emails
      */
-    this.usersnapService.initialize({ user: { email: 'user@mail.com' }})
+    this.usersnapService.initialize({ user: { email: 'user@mail.com' } })
   }
 }

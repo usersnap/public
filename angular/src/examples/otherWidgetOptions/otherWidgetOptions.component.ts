@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsersnapService } from 'src/services/usersnap.service';
+import { UsersnapService } from '../../services/usersnap.service';
 
 @Component({
   selector: 'app-other-widget-options',
