@@ -29,7 +29,7 @@ export default function PassHiddenValues({
     }
     usersnapApi.on('open', handleOpenWidget)
 
-    return () => usersnapApi.off('open', () => {})
+    return () => usersnapApi.off('open', handleOpenWidget)
   }, [usersnapApi, labels, email, assignee, custom])
 
   return <div>Pass initial values to widget</div>
