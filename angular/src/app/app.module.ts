@@ -1,38 +1,36 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BasicComponent } from 'src/examples/basic/basic.component';
-import { CustomButtonComponent } from 'src/examples/customButton/customButton.component';
-import { CustomDisplayLogicComponent } from 'src/examples/customDisplayLogic/customDisplayLogic.component';
-import { NativeScreenshotComponent } from 'src/examples/nativeScreenshot/nativeScreenshot.component';
-import { NativeScreenshotInNewTabComponent } from 'src/examples/nativeScreenshotInNewTab/nativeScreenshotInNewTab.component';
-import { OnlyForLoggedInUsersComponent } from 'src/examples/onlyForLoggedInUsers/onlyForLoggedInUsers.component';
-import { OnlyWithCertainEmailsComponent } from 'src/examples/onlyWithCertainEmails/onlyWithCertainEmails.component';
-import { OtherWidgetOptionsComponent } from 'src/examples/otherWidgetOptions/otherWidgetOptions.component';
-import { PassHiddenValuesComponent } from 'src/examples/passHiddenValues/passHiddenValues.component';
-import { PassInitialValuesComponent } from 'src/examples/passInitialValues/passInitialValues.component';
-import { WidgetApiEventsComponent } from 'src/examples/widgetApiEvents/widgetApiEvents.component';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BasicComponent } from "../examples/basic/basic.component";
+import { CustomButtonComponent } from "../examples/customButton/customButton.component";
+import { CustomDisplayLogicComponent } from "../examples/customDisplayLogic/customDisplayLogic.component";
+import { NativeScreenshotComponent } from "../examples/nativeScreenshot/nativeScreenshot.component";
+import { NativeScreenshotInNewTabComponent } from "../examples/nativeScreenshotInNewTab/nativeScreenshotInNewTab.component";
+import { OnlyForLoggedInUsersComponent } from "../examples/onlyForLoggedInUsers/onlyForLoggedInUsers.component";
+import { OnlyWithCertainEmailsComponent } from "../examples/onlyWithCertainEmails/onlyWithCertainEmails.component";
+import { OtherWidgetOptionsComponent } from "../examples/otherWidgetOptions/otherWidgetOptions.component";
+import { PassHiddenValuesComponent } from "../examples/passHiddenValues/passHiddenValues.component";
+import { PassInitialValuesComponent } from "../examples/passInitialValues/passInitialValues.component";
+import { WidgetApiEventsComponent } from "../examples/widgetApiEvents/widgetApiEvents.component";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BasicComponent,
-    CustomButtonComponent,
-    OnlyForLoggedInUsersComponent,
-    OnlyWithCertainEmailsComponent,
-    CustomDisplayLogicComponent,
-    PassInitialValuesComponent,
-    PassHiddenValuesComponent,
-    WidgetApiEventsComponent,
-    NativeScreenshotComponent,
-    NativeScreenshotInNewTabComponent,
-    OtherWidgetOptionsComponent,
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		BasicComponent,
+		CustomButtonComponent,
+		OnlyForLoggedInUsersComponent,
+		OnlyWithCertainEmailsComponent,
+		CustomDisplayLogicComponent,
+		PassInitialValuesComponent,
+		PassHiddenValuesComponent,
+		WidgetApiEventsComponent,
+		NativeScreenshotComponent,
+		NativeScreenshotInNewTabComponent,
+		OtherWidgetOptionsComponent,
+	],
+	imports: [BrowserModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,26 +1,75 @@
-# Add Usersnap to Nuxt.js
+# Nuxt Minimal Starter
 
-This example showcases how to add Usersnap Platform widgets in [Nuxt.js](https://nuxtjs.org). 
-The project was created with `create-nux-app`.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Starting up the example
+## Setup
+
+Make sure to install dependencies:
 
 ```bash
-# install dependencies
-$ yarn install
+# npm
+npm install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# pnpm
+pnpm install
 
+# yarn
+yarn install
+
+# bun
+bun install
 ```
-![Example](./example.png "Example")
-## Show me how it's done
-The installation of the widget is done using [`plugins`](https://nuxtjs.org/docs/2.x/directory-structure/plugins)
-We create a client plugin file `plugins/usersnap.client.js` and update the plugins entry in the `nuxt.config.js`
 
-Make sure to update global api key and project api key values.
+## Development Server
 
-If it doesn't work, post on [GitHub discussions](https://github.com/usersnap/public/issues).
+Start the development server on `http://localhost:3000`:
 
-If you need help on how to use the api, see our [documentation](https://help.usersnap.com/docs/flexible-use-cases-for-global-snippet).
+```bash
+# npm
+npm run dev
 
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

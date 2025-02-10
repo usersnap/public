@@ -1,33 +1,87 @@
-<div class="content" role="main">
-  <div>
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(180deg,
+        var(--orange-red) 0%,
+        var(--vivid-pink) 50%,
+        var(--electric-violet) 100%);
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(90deg,
+        var(--orange-red) 0%,
+        var(--vivid-pink) 50%,
+        var(--electric-violet) 100%);
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+</style>
+
+<main class="main">
+  <div class="content" role="main">
+    <div>
+      <img width="40" alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    </div>
+    <h1>Usersnap</h1>
+    <p>
+      Take a look at the examples in the <code>src/examples</code> folder.
+      <app-basic></app-basic>
+    </p>
   </div>
-  <div>
-    <button (click)="setCurrentExample('basic')">Basic</button>
-    <button (click)="setCurrentExample('customButton')">Custom button</button>
-    <button (click)="setCurrentExample('onlyForLoggedInUsers')">Only for logged in users</button>
-    <button (click)="setCurrentExample('onlyWithCertainEmails')">Only with certain emails</button>
-    <button (click)="setCurrentExample('customDisplayLogic')">Custom display logic</button>
-    <button (click)="setCurrentExample('passInitialValues')">Pass initial values</button>
-    <button (click)="setCurrentExample('passHiddenValues')">Pass hidden values</button>
-    <button (click)="setCurrentExample('widgetApiEvents')">Widget API events</button>
-    <button (click)="setCurrentExample('nativeScreenshot')">Native screenshot</button>
-    <button (click)="setCurrentExample('nativeScreenshotInNewTab')">Native screenshot in new tab</button>
-    <button (click)="setCurrentExample('otherWidgetOptions')">Other widget options</button>
-  </div>
-  <app-basic *ngIf="currentExample === 'basic'"></app-basic>
-  <app-custom-button *ngIf="currentExample === 'customButton'"></app-custom-button>
-  <app-only-for-logged-in-users *ngIf="currentExample === 'onlyForLoggedInUsers'"></app-only-for-logged-in-users>
-  <app-only-with-certain-emails *ngIf="currentExample === 'onlyWithCertainEmails'"></app-only-with-certain-emails>
-  <app-custom-display-logic *ngIf="currentExample === 'customDisplayLogic'"></app-custom-display-logic>
-  <app-pass-initial-values *ngIf="currentExample === 'passInitialValues'"></app-pass-initial-values>
-  <app-pass-hidden-values *ngIf="currentExample === 'passHiddenValues'"></app-pass-hidden-values>
-  <app-widget-api-events *ngIf="currentExample === 'widgetApiEvents'"></app-widget-api-events>
-  <app-native-screenshot *ngIf="currentExample === 'nativeScreenshot'"></app-native-screenshot>
-  <app-native-screenshot-in-new-tab *ngIf="currentExample === 'nativeScreenshotInNewTab'"></app-native-screenshot-in-new-tab>
-  <app-other-widget-options *ngIf="currentExample === 'otherWidgetOptions'"></app-other-widget-options>
-</div>
+</main>
