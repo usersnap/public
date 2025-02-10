@@ -2,13 +2,6 @@ import logo from './assets/react.svg'
 import './App.css'
 import { UsersnapProvider } from './UsersnapProvider'
 
-// import CustomButton from './examples/CustomButton'
-// import PassInitialValues from './examples/PassInitialValues'
-// import CustomDisplayLogic from './examples/CustomDisplayLogic';
-// import PassInitialValues from './examples/PassInitialValues';
-// import WidgetApiEvents from './examples/WidgetApiEvents';
-// import PassHiddenValues from './examples/PassHiddenValues';
-
 function App() {
   return (
     <UsersnapProvider>

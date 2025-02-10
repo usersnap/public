@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BasicComponent } from '../examples/basic/basic.component';
