@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import { useUsersnapApi } from '../useUsersnapApi'
-import type { SpaceOpenEventCallback } from '@usersnap/browser'
+import { useEffect } from "react";
+import { useUsersnapApi } from "../useUsersnapApi";
+import type { SpaceOpenEventCallback } from "@usersnap/browser";
 
 /**
  * You can define initial values for a few fields in your widget.
@@ -9,28 +9,27 @@ import type { SpaceOpenEventCallback } from '@usersnap/browser'
  * NPS, CSAT and Customer Engagement
  */
 export default function PassInitialValues({
-  labels = ['Bug'],
-  email = 'user@mail.com',
-  assignee = 'assignee@mail.com',
-  rating = 5,
+	labels = ["Bug"],
+	email = "user@mail.com",
+	assignee = "assignee@mail.com",
+	rating = 5,
 }) {
-  const usersnapApi = useUsersnapApi()
+	const usersnapApi = useUsersnapApi();
 
-  useEffect(() => {
-    if (!usersnapApi) {
-      return
-    }
+	useEffect(() => {
+		if (!usersnapApi) {
+			return;
+		}
 
-    const handleOpenWidget: SpaceOpenEventCallback = (event) => {
-      console.log(event.api)
-      event.api.setValue('labels', labels)
-      event.api.setValue('visitor', email)
-      event.api.setValue('assignee', assignee)
-      event.api.setValue('rating', rating.toString())
-    }
-    usersnapApi.on('open', handleOpenWidget)
+		const handleOpenWidget: SpaceOpenEventCallback = (event) => {
+			console.log(event.api);
+			event.api.setValue("labels", labels);
+			event.api.setValue("visitor", email);
+			event.api.setValue("assignee", assignee);
+			event.api.setValue("rating", rating.toString());
+		};
+		usersnapApi.on("open", handleOpenWidget);
 
-    return () => usersnapApi.off('open', handleOpenWidget)
-  }, [usersnapApi, labels, email, assignee, rating])
-
+		return () => usersnapApi.off("open", handleOpenWidget);
+	}, [usersnapApi, labels, email, assignee, rating]);
 }
