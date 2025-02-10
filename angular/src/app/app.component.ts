@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { BasicComponent } from '../examples/basic/basic.component';
-
+import { BasicComponent } from "../examples/basic/basic.component";
 
 @Component({
-  selector: 'app-root',
-  imports: [BasicComponent],
-  templateUrl: './app.component.html'
+	selector: "app-root",
+	imports: [BasicComponent],
+	templateUrl: "./app.component.html",
 })
 export class AppComponent {
-  title = 'angular19';
-  currentExample = 'basic'
+	title = "angular19";
+	currentExample = "basic";
 
-  setCurrentExample(example: string) {
-    this.currentExample = example;
-  }
+	setCurrentExample(example: string) {
+		this.currentExample = example;
+	}
 }
