@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { loadSpace } from '@usersnap/browser'
 import type { SpaceApi, InitOptions } from '@usersnap/browser'
-import { USERSNAP_GLOBAL_API_KEY } from './constants'
+import { USERSNAP_SPACE_API_KEY } from './constants'
 import { UsersnapContext } from './UsersnapContext'
 
 const initParams: InitOptions = {
@@ -18,7 +18,7 @@ export const UsersnapProvider = ({
   const [usersnapApi, setUsersnapApi] = useState<SpaceApi | null>(null)
 
   useEffect(() => {
-    loadSpace(USERSNAP_GLOBAL_API_KEY).then((api) => {
+    loadSpace(USERSNAP_SPACE_API_KEY).then((api) => {
       api.init(initParams)
       setUsersnapApi(api)
     })
